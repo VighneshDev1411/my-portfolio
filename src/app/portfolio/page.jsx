@@ -25,7 +25,6 @@ import {
   Award,
 } from "lucide-react";
 
-
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -35,8 +34,10 @@ export default function Portfolio() {
     setIsLoaded(true);
     // Check for saved theme preference or default to system preference
     const saved = localStorage.getItem("darkMode");
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
     if (saved !== null) {
       setDarkMode(JSON.parse(saved));
     } else {
@@ -46,18 +47,18 @@ export default function Portfolio() {
 
   // Fixed useEffect for proper theme application
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       localStorage.setItem("darkMode", JSON.stringify(darkMode));
-      
+
       const html = document.documentElement;
       const body = document.body;
-      
+
       if (darkMode) {
-        html.classList.add('dark');
-        body.classList.add('dark');
+        html.classList.add("dark");
+        body.classList.add("dark");
       } else {
-        html.classList.remove('dark');
-        body.classList.remove('dark');
+        html.classList.remove("dark");
+        body.classList.remove("dark");
       }
     }
   }, [darkMode]);
@@ -136,7 +137,9 @@ export default function Portfolio() {
         {/* Header */}
         <header className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 z-50 transition-colors duration-300">
           <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div className="font-bold text-xl text-gray-900 dark:text-white">Vignesh Pathak</div>
+            <div className="font-bold text-xl text-gray-900 dark:text-white">
+              Vignesh Pathak
+            </div>
 
             <div className="hidden md:flex space-x-8">
               <a
@@ -170,7 +173,11 @@ export default function Portfolio() {
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               aria-label="Toggle dark mode"
             >
-              {darkMode ? <Sun size={20} className="text-yellow-500" /> : <Moon size={20} className="text-gray-700" />}
+              {darkMode ? (
+                <Sun size={20} className="text-yellow-500" />
+              ) : (
+                <Moon size={20} className="text-gray-700" />
+              )}
             </button>
           </nav>
         </header>
@@ -196,7 +203,9 @@ export default function Portfolio() {
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-300">
-              I create intelligent automation solutions and AI-powered applications that solve real-world problems using cutting-edge technology.
+              I create intelligent automation solutions and AI-powered
+              applications that solve real-world problems using cutting-edge
+              technology.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
@@ -659,11 +668,11 @@ export default function Portfolio() {
                           GitHub
                         </a>
                         <a
-                          href="https://ai-automation-assistant.vercel.app/login"
+                          href={`${process.env.NEXT_PUBLIC_SITE_URL}/login`}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors font-medium"
                         >
+                          Login
                           <ExternalLink size={16} />
                           Live Demo
                         </a>
@@ -786,22 +795,24 @@ export default function Portfolio() {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+        <section
+          id="projects"
+          className="py-20 px-6 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+        >
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
                 Featured Projects
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Real-world applications showcasing GenAI automation, mobile development, and full-stack engineering
+                Real-world applications showcasing GenAI automation, mobile
+                development, and full-stack engineering
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              
               {/* CogniFlow - AI Automation Platform */}
               <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                
                 {/* Project Header */}
                 <div className="relative">
                   <div className="bg-gradient-to-br from-blue-500 via-purple-600 to-blue-600 p-8">
@@ -811,8 +822,12 @@ export default function Portfolio() {
                           <Brain className="text-white" size={28} />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white">CogniFlow</h3>
-                          <p className="text-blue-100">AI Workflow Automation Platform</p>
+                          <h3 className="text-2xl font-bold text-white">
+                            CogniFlow
+                          </h3>
+                          <p className="text-blue-100">
+                            AI Workflow Automation Platform
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
@@ -822,7 +837,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Gradient Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white dark:from-gray-900 to-transparent"></div>
                 </div>
@@ -830,8 +845,10 @@ export default function Portfolio() {
                 <div className="p-8">
                   {/* Description */}
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
-                    Enterprise-grade AI workflow automation platform featuring a <strong>drag-and-drop visual builder</strong> with 
-                    10+ tool integrations including Slack, Gmail, and Notion. Built with <strong>RAG-based semantic search</strong> 
+                    Enterprise-grade AI workflow automation platform featuring a{" "}
+                    <strong>drag-and-drop visual builder</strong> with 10+ tool
+                    integrations including Slack, Gmail, and Notion. Built with{" "}
+                    <strong>RAG-based semantic search</strong>
                     and intelligent orchestration using LangChain and LangGraph.
                   </p>
 
@@ -848,7 +865,9 @@ export default function Portfolio() {
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                        <span>10+ tool integrations (Slack, Gmail, Notion)</span>
+                        <span>
+                          10+ tool integrations (Slack, Gmail, Notion)
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
@@ -877,16 +896,25 @@ export default function Portfolio() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { name: 'Next.js', color: 'bg-black text-white' },
-                        { name: 'TypeScript', color: 'bg-blue-600 text-white' },
-                        { name: 'Supabase', color: 'bg-green-600 text-white' },
-                        { name: 'LangChain', color: 'bg-purple-600 text-white' },
-                        { name: 'LangGraph', color: 'bg-indigo-600 text-white' },
-                        { name: 'GPT-4', color: 'bg-emerald-600 text-white' },
-                        { name: 'Docker', color: 'bg-blue-500 text-white' },
-                        { name: 'PostgreSQL', color: 'bg-blue-800 text-white' }
+                        { name: "Next.js", color: "bg-black text-white" },
+                        { name: "TypeScript", color: "bg-blue-600 text-white" },
+                        { name: "Supabase", color: "bg-green-600 text-white" },
+                        {
+                          name: "LangChain",
+                          color: "bg-purple-600 text-white",
+                        },
+                        {
+                          name: "LangGraph",
+                          color: "bg-indigo-600 text-white",
+                        },
+                        { name: "GPT-4", color: "bg-emerald-600 text-white" },
+                        { name: "Docker", color: "bg-blue-500 text-white" },
+                        { name: "PostgreSQL", color: "bg-blue-800 text-white" },
                       ].map((tech, index) => (
-                        <span key={index} className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}>
+                        <span
+                          key={index}
+                          className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}
+                        >
                           {tech.name}
                         </span>
                       ))}
@@ -900,8 +928,10 @@ export default function Portfolio() {
                       Architecture Highlights
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Docker monorepo with CI/CD pipeline, implementing microservices architecture with 
-                      Supabase Row Level Security (RLS) for enterprise-grade data protection and scalable deployment.
+                      Docker monorepo with CI/CD pipeline, implementing
+                      microservices architecture with Supabase Row Level
+                      Security (RLS) for enterprise-grade data protection and
+                      scalable deployment.
                     </p>
                   </div>
 
@@ -913,7 +943,10 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
                     >
-                      <Github size={18} className="group-hover:scale-110 transition-transform" />
+                      <Github
+                        size={18}
+                        className="group-hover:scale-110 transition-transform"
+                      />
                       <span>View Source</span>
                     </a>
                     <a
@@ -922,7 +955,10 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-medium group"
                     >
-                      <Play size={18} className="group-hover:scale-110 transition-transform" />
+                      <Play
+                        size={18}
+                        className="group-hover:scale-110 transition-transform"
+                      />
                       <span>Live Demo</span>
                     </a>
                   </div>
@@ -931,7 +967,6 @@ export default function Portfolio() {
 
               {/* Smart Grocery iOS App */}
               <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                
                 {/* Project Header */}
                 <div className="relative">
                   <div className="bg-gradient-to-br from-green-500 via-emerald-600 to-teal-600 p-8">
@@ -941,8 +976,12 @@ export default function Portfolio() {
                           <Smartphone className="text-white" size={28} />
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-white">Smart Grocery</h3>
-                          <p className="text-green-100">iOS Shopping Experience</p>
+                          <h3 className="text-2xl font-bold text-white">
+                            Smart Grocery
+                          </h3>
+                          <p className="text-green-100">
+                            iOS Shopping Experience
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
@@ -952,7 +991,7 @@ export default function Portfolio() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Gradient Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white dark:from-gray-900 to-transparent"></div>
                 </div>
@@ -960,9 +999,11 @@ export default function Portfolio() {
                 <div className="p-8">
                   {/* Description */}
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
-                    Native iOS grocery shopping application built with <strong>SwiftUI</strong> featuring modern design patterns, 
-                    intuitive user experience, and seamless shopping functionality. Demonstrates advanced iOS development 
-                    skills and mobile UI/UX best practices.
+                    Native iOS grocery shopping application built with{" "}
+                    <strong>SwiftUI</strong> featuring modern design patterns,
+                    intuitive user experience, and seamless shopping
+                    functionality. Demonstrates advanced iOS development skills
+                    and mobile UI/UX best practices.
                   </p>
 
                   {/* Key Features */}
@@ -1007,14 +1048,17 @@ export default function Portfolio() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { name: 'SwiftUI', color: 'bg-blue-600 text-white' },
-                        { name: 'Swift', color: 'bg-orange-600 text-white' },
-                        { name: 'Xcode', color: 'bg-blue-500 text-white' },
-                        { name: 'iOS SDK', color: 'bg-gray-700 text-white' },
-                        { name: 'MVVM', color: 'bg-purple-600 text-white' },
-                        { name: 'Combine', color: 'bg-green-600 text-white' }
+                        { name: "SwiftUI", color: "bg-blue-600 text-white" },
+                        { name: "Swift", color: "bg-orange-600 text-white" },
+                        { name: "Xcode", color: "bg-blue-500 text-white" },
+                        { name: "iOS SDK", color: "bg-gray-700 text-white" },
+                        { name: "MVVM", color: "bg-purple-600 text-white" },
+                        { name: "Combine", color: "bg-green-600 text-white" },
                       ].map((tech, index) => (
-                        <span key={index} className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}>
+                        <span
+                          key={index}
+                          className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}
+                        >
                           {tech.name}
                         </span>
                       ))}
@@ -1028,8 +1072,10 @@ export default function Portfolio() {
                       iOS Development Excellence
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Showcases mastery of SwiftUI declarative syntax, MVVM architecture, and iOS Human Interface Guidelines 
-                      for creating native mobile experiences that feel natural on Apple platforms.
+                      Showcases mastery of SwiftUI declarative syntax, MVVM
+                      architecture, and iOS Human Interface Guidelines for
+                      creating native mobile experiences that feel natural on
+                      Apple platforms.
                     </p>
                   </div>
 
@@ -1041,7 +1087,10 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
                     >
-                      <Github size={18} className="group-hover:scale-110 transition-transform" />
+                      <Github
+                        size={18}
+                        className="group-hover:scale-110 transition-transform"
+                      />
                       <span>View Source</span>
                     </a>
                     <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg cursor-not-allowed">
@@ -1059,25 +1108,44 @@ export default function Portfolio() {
                 <div className="mb-4">
                   <div className="flex justify-center mb-4">
                     <div className="p-4 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-full">
-                      <Code2 className="text-blue-600 dark:text-blue-400" size={32} />
+                      <Code2
+                        className="text-blue-600 dark:text-blue-400"
+                        size={32}
+                      />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">More Projects Coming Soon</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                    More Projects Coming Soon
+                  </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-xl mx-auto">
-                    I'm constantly working on new projects that showcase cutting-edge technologies like GenAI, 
-                    full-stack development, and mobile applications. Stay tuned for more innovative solutions!
+                    I'm constantly working on new projects that showcase
+                    cutting-edge technologies like GenAI, full-stack
+                    development, and mobile applications. Stay tuned for more
+                    innovative solutions!
                   </p>
                 </div>
-                
+
                 {/* Skills Preview */}
                 <div className="flex flex-wrap justify-center gap-3 mb-6">
-                  {['Next.js', 'React Native', 'FastAPI', 'LangChain', 'Supabase', 'Docker', 'Azure', 'SwiftUI'].map((skill, index) => (
-                    <span key={index} className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm">
+                  {[
+                    "Next.js",
+                    "React Native",
+                    "FastAPI",
+                    "LangChain",
+                    "Supabase",
+                    "Docker",
+                    "Azure",
+                    "SwiftUI",
+                  ].map((skill, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                    >
                       {skill}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex justify-center gap-4">
                   <a
                     href="https://github.com/VighneshDev1411"
@@ -1129,7 +1197,7 @@ export default function Portfolio() {
                 />
                 <h3 className="font-semibold mb-2">GitHub</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                 github.com/VighneshDev1411
+                  github.com/VighneshDev1411
                 </p>
               </div>
 
@@ -1166,10 +1234,14 @@ export default function Portfolio() {
 
       <style jsx>{`
         @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
-        
+
         @keyframes fade-in-up {
           from {
             opacity: 0;
@@ -1180,30 +1252,30 @@ export default function Portfolio() {
             transform: translateY(0);
           }
         }
-        
+
         .animate-fade-in {
           animation: fade-in 1s ease-out;
         }
-        
+
         .animate-fade-in-up {
           animation: fade-in-up 1s ease-out;
         }
-        
+
         .delay-200 {
           animation-delay: 0.2s;
           animation-fill-mode: both;
         }
-        
+
         .delay-300 {
           animation-delay: 0.3s;
           animation-fill-mode: both;
         }
-        
+
         .delay-400 {
           animation-delay: 0.4s;
           animation-fill-mode: both;
         }
-        
+
         html {
           scroll-behavior: smooth;
         }
