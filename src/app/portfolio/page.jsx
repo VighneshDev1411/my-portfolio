@@ -659,7 +659,7 @@ export default function Portfolio() {
                           GitHub
                         </a>
                         <a
-                          href="https://ai-automation-assistant-iaw7os0z8.vercel.app/dashboard"
+                          href="https://ai-automation-assistant.vercel.app/login"
                           target="_blank"
                           rel="noreferrer"
                           className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors font-medium"
