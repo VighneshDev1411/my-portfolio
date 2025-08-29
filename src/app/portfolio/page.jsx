@@ -950,7 +950,7 @@ export default function Portfolio() {
                       <span>View Source</span>
                     </a>
                     <a
-                      href="https://ai-automation-assistant.vercel.app/dashboard"
+                      href={`${process.env.NEXT_PUBLIC_SITE_URL}/login`}
                       target="_blank"
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-medium group"
