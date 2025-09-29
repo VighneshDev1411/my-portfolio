@@ -1208,13 +1208,13 @@ export default function Portfolio() {
                 />
                 <h3 className="font-semibold mb-2">LinkedIn</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  LinkedIn Profile
+                 https://www.linkedin.com/in/vighnesh-pathak-4018b7192/
                 </p>
               </div>
             </div>
 
             <a
-              href="mailto:vpath6@uic.edu"
+              href="mailto:vigneshpathak14@gmail.com"
               className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
             >
               Send me an email
