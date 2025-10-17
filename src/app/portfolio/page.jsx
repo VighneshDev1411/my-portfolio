@@ -1217,7 +1217,7 @@ export default function Portfolio() {
               href="mailto:vigneshpathak14@gmail.com"
               className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
             >
-              Send me an email
+              Send me an e-mail 
             </a>
           </div>
         </section>
