@@ -199,13 +199,13 @@ export default function Portfolio() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up delay-200">
-              GenAI & LLM Full-Stack Engineer
+              Data & AI Engineering Analyst | Full-Stack Developer
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-300">
-              I create intelligent automation solutions and AI-powered
-              applications that solve real-world problems using cutting-edge
-              technology.
+              I build production-grade GenAI applications, ML pipelines, and data-driven solutions
+              using LLMs, PyTorch, LangChain, and modern full-stack technologies. Passionate about
+              leveraging AI/ML to solve complex business problems and automate workflows.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
@@ -236,8 +236,7 @@ export default function Portfolio() {
                 About Me
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                GenAI & LLM-focused full-stack engineer passionate about
-                building intelligent automation solutions
+                Data & AI Engineering Analyst specializing in GenAI, ML/NLP pipelines, and full-stack development
               </p>
             </div>
 
@@ -264,15 +263,19 @@ export default function Portfolio() {
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                     I'm a{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
-                      GenAI & LLM-focused full-stack engineer
+                      Data & AI Engineering Analyst
                     </span>{" "}
-                    who ships production AI applications with{" "}
-                    <span className="font-medium">Next.js (TypeScript)</span>,
-                    elegant UIs with
-                    <span className="font-medium"> Tailwind CSS</span>, and
-                    intelligent automations using
-                    <span className="font-medium"> LangChain</span> and{" "}
-                    <span className="font-medium">LangGraph</span>.
+                    with 3+ years of experience building{" "}
+                    <span className="font-medium">GenAI-powered enterprise applications</span>,
+                    developing{" "}
+                    <span className="font-medium">NLP pipelines with PyTorch</span>, and
+                    deploying{" "}
+                    <span className="font-medium">ML models at scale</span>. I combine
+                    expertise in{" "}
+                    <span className="font-medium">full-stack development</span> (Next.js, Spring Boot, FastAPI),{" "}
+                    <span className="font-medium">AI/ML</span> (LangChain, LangGraph, Transformers), and{" "}
+                    <span className="font-medium">data science</span> (regression, clustering, A/B testing)
+                    to deliver production-ready solutions.
                   </p>
 
                   {/* Impact Metrics */}
@@ -298,7 +301,7 @@ export default function Portfolio() {
                   {/* Contact Links */}
                   <div className="grid grid-cols-2 gap-3">
                     <a
-                      href="mailto:vpath6@uic.edu"
+                      href="mailto:vigneshpathak14@gmail.com"
                       className="flex items-center justify-center gap-2 p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300 group"
                       aria-label="Email"
                     >
@@ -322,7 +325,7 @@ export default function Portfolio() {
                       <span className="text-sm font-medium">GitHub</span>
                     </a>
                     <a
-                      href="https://www.linkedin.com/in/vighnesh-pathak-4018b7192/"
+                      href="https://www.linkedin.com/in/vignesh-pathak-4018b7192/"
                       target="_blank"
                       rel="noreferrer"
                       className="flex items-center justify-center gap-2 p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300 group"
@@ -335,7 +338,7 @@ export default function Portfolio() {
                       <span className="text-sm font-medium">LinkedIn</span>
                     </a>
                     <a
-                      href="https://myporfolio2025.netlify.app"
+                      href="https://my-portfolio-eight-kappa-44.vercel.app/"
                       target="_blank"
                       rel="noreferrer"
                       className="flex items-center justify-center gap-2 p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300 group"
@@ -409,39 +412,111 @@ export default function Portfolio() {
                       <div className="mb-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                           <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            GenAI & LLM Full-Stack Engineer Analyst
+                            Data & AI Engineering Analyst
                           </h4>
                           <span className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full font-medium">
                             Nov 2022 – Jul 2025
                           </span>
                         </div>
                         <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
-                          Accenture
+                          Accenture | Pune, India
                         </p>
 
                         {/* Key Projects */}
                         <div className="mb-4">
-                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                            Major Projects & Clients:
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center gap-2">
+                            <Zap size={16} className="text-yellow-500" />
+                            Major Projects & Impact:
                           </h5>
-                          <div className="grid sm:grid-cols-2 gap-3 mb-3">
-                            <div className="flex items-center gap-2">
-                              <Zap size={14} className="text-yellow-500" />
-                              <span className="text-sm text-gray-700 dark:text-gray-300">
-                                <strong>Grocify Project:</strong> Google-funded
-                                GenAI e-grocery platform
-                              </span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Brain size={14} className="text-purple-500" />
-                              <span className="text-sm text-gray-700 dark:text-gray-300">
-                                Enterprise AI features for retail giants
-                              </span>
-                            </div>
+                          <div className="mb-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
+                            <p className="text-sm text-gray-700 dark:text-gray-300">
+                              <strong className="text-blue-600 dark:text-blue-400">Grocify (Smart Grocery Platform):</strong> Co-led development of GenAI-powered retail platform featuring
+                              OCR receipt parsing, intelligent expiry alerts, and SmartCart recommendations. Built end-to-end solution serving major e-commerce clients.
+                            </p>
                           </div>
+                        </div>
 
-                          {/* Client logos/names */}
-                          <div className="flex flex-wrap gap-2 mb-4">
+                        {/* Tech Stack */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                            Tech Stack:
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              "Python",
+                              "PyTorch",
+                              "LangChain",
+                              "LangGraph",
+                              "AI Agents",
+                              "Transformers",
+                              "FastAPI",
+                              "Next.js",
+                              "TypeScript",
+                              "AWS",
+                              "Docker",
+                            ].map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-800"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Detailed Achievements */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                            <Award size={16} className="text-green-500" />
+                            Key Contributions:
+                          </h5>
+                          <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>GenAI Application Development:</strong> Built and deployed GenAI-driven enterprise applications using LLMs, LangChain, LangGraph, and autonomous AI Agents, automating complex workflows across multiple e-commerce clients
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>NLP Pipeline Development:</strong> Developed production NLP pipelines with PyTorch for text classification, sentiment analysis, and embeddings generation. Implemented comprehensive feature engineering and preprocessing workflows
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Data Science & Analytics:</strong> Applied A/B testing, regression analysis, and clustering techniques to improve personalization and targeting accuracy by 30%. Conducted statistical analysis for data-driven decision making
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Multimodal AI Solutions:</strong> Created multimodal AI systems integrating OCR, vision models, and transformer embeddings for intelligent search, personalized recommendations, and demand forecasting
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>ML Production & MLOps:</strong> Productionized ML pipelines using FastAPI + AWS + Docker stack with CI/CD automation. Built monitoring dashboards for tracking model drift and data quality metrics
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Grocify Platform Features:</strong> Implemented OCR-based receipt parsing, expiry tracking system, SmartCart recommendations engine, and RAG-based semantic search for enhanced user experience
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        {/* Client Portfolio */}
+                        <div className="mt-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 text-xs">
+                            Enterprise Clients:
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
                             {[
                               "Macy's",
                               "Bath & Body Works",
@@ -459,60 +534,6 @@ export default function Portfolio() {
                             ))}
                           </div>
                         </div>
-
-                        {/* Tech Stack */}
-                        <div className="mb-4">
-                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                            Tech Stack:
-                          </h5>
-                          <div className="flex flex-wrap gap-2">
-                            {[
-                              "Next.js",
-                              "TypeScript",
-                              "Tailwind CSS",
-                              "LangChain",
-                              "LangGraph",
-                              "CrewAI",
-                              "GPT-4",
-                              "Azure",
-                              "Docker",
-                            ].map((tech) => (
-                              <span
-                                key={tech}
-                                className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-800"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Key Achievements */}
-                        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                          <li className="flex items-start gap-2">
-                            <div className="w-1 h-1 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
-                            <span>
-                              Developed Gemini Vision + CrewAI engine for
-                              auto-extracting product attributes (sleeve,
-                              neckline, fabric, color)
-                            </span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1 h-1 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
-                            <span>
-                              Implemented LangGraph-driven orchestration for
-                              multi-step AI workflows with real-time
-                              intelligence
-                            </span>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1 h-1 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
-                            <span>
-                              Led Angular to Next.js migration reducing load
-                              times and improving developer experience
-                            </span>
-                          </li>
-                        </ul>
                       </div>
                     </div>
 
@@ -523,38 +544,66 @@ export default function Portfolio() {
                       <div className="mb-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                           <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            Full Stack Developer Intern
+                            Java Full Stack Developer Intern
                           </h4>
                           <span className="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full font-medium">
                             Jan 2022 – May 2022
                           </span>
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 font-medium mb-3">
-                          Capgemini
+                          Capgemini | Mumbai, India
                         </p>
 
-                        <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                        {/* Tech Stack */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 text-sm">
+                            Tech Stack:
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              "Spring Boot",
+                              "Angular",
+                              "Java",
+                              "PostgreSQL",
+                              "MongoDB",
+                              "Docker",
+                              "REST APIs",
+                            ].map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-700 dark:text-gray-300"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Achievements */}
+                        <ul className="space-y-2.5 text-sm text-gray-700 dark:text-gray-300">
                           <li className="flex items-start gap-2">
-                            <div className="w-1 h-1 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                            <span>
-                              Developed Spring Boot microservice backend for
-                              e-commerce platform with authentication & order
-                              management
-                            </span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                              <strong>Full-Stack Development:</strong> Developed full-stack applications using Angular frontend and Spring Boot microservices backend, building responsive UI components and RESTful APIs for e-commerce platform
+                            </div>
                           </li>
                           <li className="flex items-start gap-2">
-                            <div className="w-1 h-1 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                            <span>
-                              Implemented RBAC + JWT authentication ensuring
-                              99.9% session reliability
-                            </span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                              <strong>Microservices Architecture:</strong> Implemented Spring Boot + MongoDB microservices for authentication and catalog APIs, improving system performance by 20% through optimized service design
+                            </div>
                           </li>
                           <li className="flex items-start gap-2">
-                            <div className="w-1 h-1 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                            <span>
-                              Optimized MongoDB queries reducing latency by 40%
-                              and achieved 85%+ test coverage
-                            </span>
+                            <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                              <strong>Database Optimization:</strong> Wrote complex SQL queries and optimized database schemas using PostgreSQL, implementing efficient indexes and joins for analytics reporting and data retrieval
+                            </div>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+                            <div>
+                              <strong>DevOps & Deployment:</strong> Worked on distributed data pipelines and collaborated on containerized deployments using Docker, ensuring scalable and maintainable application infrastructure
+                            </div>
                           </li>
                         </ul>
                       </div>
@@ -583,13 +632,16 @@ export default function Portfolio() {
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div>
                             <h4 className="font-semibold text-gray-900 dark:text-white">
-                              M.S. Computer Science
+                              M.S. in Computer Science
                             </h4>
-                            <p className="text-sm text-purple-600 dark:text-purple-400">
-                              University of Illinois Chicago
+                            <p className="text-sm text-purple-600 dark:text-purple-400 mb-2">
+                              University of Illinois Chicago (UIC)
+                            </p>
+                            <p className="text-xs text-gray-600 dark:text-gray-400">
+                              <strong>Coursework:</strong> Computer Algorithms I, Intro to Data Science, Computability and Complexity
                             </p>
                           </div>
-                          <span className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded">
+                          <span className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded whitespace-nowrap">
                             Aug 2025 – May 2027
                           </span>
                         </div>
@@ -599,14 +651,14 @@ export default function Portfolio() {
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div>
                             <h4 className="font-semibold text-gray-900 dark:text-white">
-                              B.E. Computer Science
+                              B.E. in Computer Science
                             </h4>
                             <p className="text-sm text-gray-600 dark:text-gray-400">
-                              G.H. Raisoni College of Engineering
+                              G.H. Raisoni College of Engineering, Nagpur, India
                             </p>
                           </div>
-                          <span className="text-xs px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded">
-                            GPA: 8.63/10
+                          <span className="text-xs px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded whitespace-nowrap">
+                            Jul 2018 – May 2022
                           </span>
                         </div>
                       </div>
@@ -668,11 +720,11 @@ export default function Portfolio() {
                           GitHub
                         </a>
                         <a
-                          href={`${process.env.NEXT_PUBLIC_SITE_URL}/login`}
+                          href="https://ai-automation-assistant.vercel.app/login"
                           target="_blank"
                           rel="noreferrer"
+                          className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-medium"
                         >
-                          Login
                           <ExternalLink size={16} />
                           Live Demo
                         </a>
@@ -695,23 +747,78 @@ export default function Portfolio() {
                     </h3>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="space-y-6">
+                    {/* Languages */}
                     <div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Code size={16} className="text-blue-500" />
                         Languages
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
                           "Python",
                           "Java",
-                          "JavaScript",
                           "TypeScript",
+                          "JavaScript",
+                          "Swift",
                           "C++",
+                          "SQL",
+                        ].map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded-full text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* AI/ML */}
+                    <div>
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Brain size={16} className="text-purple-500" />
+                        AI/ML & Data Science
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          "PyTorch",
+                          "NLP",
+                          "Transformers",
+                          "LangChain",
+                          "LangGraph",
+                          "AI Agents",
+                          "OpenAI APIs",
+                          "Regression",
+                          "Clustering",
+                          "A/B Testing",
+                        ].map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-xs rounded-full text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Frontend */}
+                    <div>
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Palette size={16} className="text-blue-500" />
+                        Frontend
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          "React",
+                          "Next.js",
+                          "React Flow",
                           "SwiftUI",
                         ].map((skill) => (
                           <span
                             key={skill}
-                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-700 dark:text-gray-300"
+                            className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-xs rounded-full text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800"
                           >
                             {skill}
                           </span>
@@ -719,22 +826,22 @@ export default function Portfolio() {
                       </div>
                     </div>
 
+                    {/* Backend */}
                     <div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
-                        Frameworks
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Code2 size={16} className="text-green-500" />
+                        Backend
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "Spring Boot",
-                          "React",
-                          "Angular",
-                          "Next.js",
                           "FastAPI",
-                          "React Native",
+                          "Spring Boot",
+                          "REST APIs",
+                          "GraphQL",
                         ].map((skill) => (
                           <span
                             key={skill}
-                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-700 dark:text-gray-300"
+                            className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-xs rounded-full text-green-700 dark:text-green-300 border border-green-200 dark:border-green-800"
                           >
                             {skill}
                           </span>
@@ -742,45 +849,73 @@ export default function Portfolio() {
                       </div>
                     </div>
 
+                    {/* Databases */}
                     <div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
-                        AI/ML
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Layers size={16} className="text-indigo-500" />
+                        Databases
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "GPT-4",
-                          "LangChain",
-                          "LangGraph",
-                          "Hugging Face",
-                          "RAG",
-                          "CrewAI",
-                        ].map((skill) => (
-                          <span
-                            key={skill}
-                            className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-xs rounded text-blue-700 dark:text-blue-300"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3">
-                        Cloud & Tools
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {[
-                          "Azure",
-                          "GCP",
-                          "Docker",
                           "PostgreSQL",
                           "MongoDB",
                           "Redis",
                         ].map((skill) => (
                           <span
                             key={skill}
-                            className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-700 dark:text-gray-300"
+                            className="px-3 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-xs rounded-full text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* DevOps/Cloud */}
+                    <div>
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Zap size={16} className="text-yellow-500" />
+                        DevOps/Cloud
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          "AWS (S3, Lambda, DynamoDB)",
+                          "Docker",
+                          "GitHub Actions",
+                          "Kubernetes",
+                          "CI/CD",
+                        ].map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 bg-yellow-50 dark:bg-yellow-900/20 text-xs rounded-full text-yellow-700 dark:text-yellow-300 border border-yellow-200 dark:border-yellow-800"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Tools & Concepts */}
+                    <div>
+                      <h4 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                        <Code size={16} className="text-gray-500" />
+                        Tools & Concepts
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {[
+                          "Git",
+                          "Postman",
+                          "JUnit",
+                          "VS Code",
+                          "Copilot",
+                          "DSA",
+                          "System Design",
+                          "Microservices",
+                          "Software Testing",
+                        ].map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded-full text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600"
                           >
                             {skill}
                           </span>
@@ -950,7 +1085,7 @@ export default function Portfolio() {
                       <span>View Source</span>
                     </a>
                     <a
-                      href={`${process.env.NEXT_PUBLIC_SITE_URL}/login`}
+                      href="https://ai-automation-assistant.vercel.app/login"
                       target="_blank"
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all font-medium group"
@@ -977,16 +1112,16 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-white">
-                            Smart Grocery
+                            Smart Grocery App
                           </h3>
                           <p className="text-green-100">
-                            iOS Shopping Experience
+                            AI-Powered Grocery Management
                           </p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white font-medium">
-                          Mobile
+                          Full-Stack
                         </span>
                       </div>
                     </div>
@@ -999,43 +1134,44 @@ export default function Portfolio() {
                 <div className="p-8">
                   {/* Description */}
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
-                    Native iOS grocery shopping application built with{" "}
-                    <strong>SwiftUI</strong> featuring modern design patterns,
-                    intuitive user experience, and seamless shopping
-                    functionality. Demonstrates advanced iOS development skills
-                    and mobile UI/UX best practices.
+                    Full-stack AI grocery management application featuring{" "}
+                    <strong>SwiftUI frontend</strong> and{" "}
+                    <strong>FastAPI backend</strong>. Implements intelligent features
+                    including OCR-based receipt parsing, automated expiry alerts, and
+                    AI-powered personalized shopping recommendations through the SmartCart
+                    recommendation engine.
                   </p>
 
                   {/* Key Features */}
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                      <Smartphone size={18} className="text-green-500" />
-                      Key Features
+                      <Brain size={18} className="text-green-500" />
+                      Intelligent Features
                     </h4>
                     <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                        <span>SwiftUI modern interface</span>
+                        <span>OCR receipt parsing & extraction</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
-                        <span>Intuitive shopping flow</span>
+                        <span>Automated expiry tracking & alerts</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                        <span>Product catalog management</span>
+                        <span>SmartCart recommendations (rule-based AI)</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
-                        <span>Cart & checkout system</span>
+                        <span>Personalized shopping suggestions</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
-                        <span>Responsive design</span>
+                        <span>Inventory management system</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
-                        <span>iOS best practices</span>
+                        <span>Product catalog & search</span>
                       </li>
                     </ul>
                   </div>
@@ -1049,11 +1185,11 @@ export default function Portfolio() {
                     <div className="flex flex-wrap gap-2">
                       {[
                         { name: "SwiftUI", color: "bg-blue-600 text-white" },
-                        { name: "Swift", color: "bg-orange-600 text-white" },
-                        { name: "Xcode", color: "bg-blue-500 text-white" },
-                        { name: "iOS SDK", color: "bg-gray-700 text-white" },
-                        { name: "MVVM", color: "bg-purple-600 text-white" },
-                        { name: "Combine", color: "bg-green-600 text-white" },
+                        { name: "FastAPI", color: "bg-green-600 text-white" },
+                        { name: "Python", color: "bg-yellow-600 text-white" },
+                        { name: "OCR", color: "bg-purple-600 text-white" },
+                        { name: "iOS", color: "bg-gray-700 text-white" },
+                        { name: "REST APIs", color: "bg-indigo-600 text-white" },
                       ].map((tech, index) => (
                         <span
                           key={index}
@@ -1065,17 +1201,17 @@ export default function Portfolio() {
                     </div>
                   </div>
 
-                  {/* Mobile Development Highlights */}
+                  {/* Project Highlights */}
                   <div className="mb-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                      <Smartphone size={16} className="text-green-500" />
-                      iOS Development Excellence
+                      <Zap size={16} className="text-green-500" />
+                      Project Impact
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Showcases mastery of SwiftUI declarative syntax, MVVM
-                      architecture, and iOS Human Interface Guidelines for
-                      creating native mobile experiences that feel natural on
-                      Apple platforms.
+                      Demonstrates end-to-end product development combining mobile app design,
+                      backend API development, and AI integration. Features OCR technology for
+                      automating grocery tracking and rule-based recommendation system for
+                      personalized shopping experiences.
                     </p>
                   </div>
 
@@ -1093,9 +1229,9 @@ export default function Portfolio() {
                       />
                       <span>View Source</span>
                     </a>
-                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg cursor-not-allowed">
+                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg opacity-50 cursor-not-allowed">
                       <Smartphone size={18} />
-                      <span>iOS App</span>
+                      <span>iOS App (Demo)</span>
                     </div>
                   </div>
                 </div>
@@ -1186,7 +1322,7 @@ export default function Portfolio() {
                 />
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  vpath6@uic.edu
+                  vigneshpathak14@gmail.com
                 </p>
               </div>
 
@@ -1208,7 +1344,7 @@ export default function Portfolio() {
                 />
                 <h3 className="font-semibold mb-2">LinkedIn</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                 https://www.linkedin.com/in/vighnesh-pathak-4018b7192/
+                  linkedin.com/in/vignesh-pathak-4018b7192
                 </p>
               </div>
             </div>
@@ -1217,7 +1353,7 @@ export default function Portfolio() {
               href="mailto:vigneshpathak14@gmail.com"
               className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg"
             >
-              Send me an e-mail 
+              Send me an email
             </a>
           </div>
         </section>
