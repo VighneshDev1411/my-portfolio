@@ -29,39 +29,48 @@ export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Fixed useEffect for proper theme initialization
+  // Initialize theme from localStorage or system preference
   useEffect(() => {
-    setIsLoaded(true);
-    // Check for saved theme preference or default to system preference
     const saved = localStorage.getItem("darkMode");
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
 
-    if (saved !== null) {
-      setDarkMode(JSON.parse(saved));
+    const initialDarkMode = saved !== null ? JSON.parse(saved) : prefersDark;
+    setDarkMode(initialDarkMode);
+
+    // Apply initial theme
+    const html = document.documentElement;
+    const body = document.body;
+
+    if (initialDarkMode) {
+      html.classList.add("dark");
+      body.classList.add("dark");
     } else {
-      setDarkMode(prefersDark);
+      html.classList.remove("dark");
+      body.classList.remove("dark");
     }
+
+    setIsLoaded(true);
   }, []);
 
-  // Fixed useEffect for proper theme application
+  // Apply theme changes when darkMode is toggled
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    if (!isLoaded) return; // Don't run on initial mount
 
-      const html = document.documentElement;
-      const body = document.body;
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
 
-      if (darkMode) {
-        html.classList.add("dark");
-        body.classList.add("dark");
-      } else {
-        html.classList.remove("dark");
-        body.classList.remove("dark");
-      }
+    const html = document.documentElement;
+    const body = document.body;
+
+    if (darkMode) {
+      html.classList.add("dark");
+      body.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+      body.classList.remove("dark");
     }
-  }, [darkMode]);
+  }, [darkMode, isLoaded]);
 
   const projects = [
     {
@@ -203,9 +212,7 @@ export default function Portfolio() {
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-300">
-              I build production-grade GenAI applications, ML pipelines, and data-driven solutions
-              using LLMs, PyTorch, LangChain, and modern full-stack technologies. Passionate about
-              leveraging AI/ML to solve complex business problems and automate workflows.
+              Graduate student in Computer Science with 2.5+ years of experience designing and deploying scalable GenAI, backend, full-stack, and iOS systems. Skilled in distributed architectures, LLM-powered automation, and production-grade applications using TypeScript, Go, FastAPI, NextJS, SwiftUI, LangChain, and AWS.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
@@ -236,7 +243,7 @@ export default function Portfolio() {
                 About Me
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Data & AI Engineering Analyst specializing in GenAI, ML/NLP pipelines, and full-stack development
+                Graduate student in CS with 2.5+ years building scalable GenAI systems, LLM-powered automation, and production applications
               </p>
             </div>
 
@@ -263,19 +270,18 @@ export default function Portfolio() {
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                     I'm a{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
-                      Data & AI Engineering Analyst
+                      Graduate student in Computer Science
                     </span>{" "}
-                    with 3+ years of experience building{" "}
-                    <span className="font-medium">GenAI-powered enterprise applications</span>,
-                    developing{" "}
-                    <span className="font-medium">NLP pipelines with PyTorch</span>, and
-                    deploying{" "}
-                    <span className="font-medium">ML models at scale</span>. I combine
-                    expertise in{" "}
-                    <span className="font-medium">full-stack development</span> (Next.js, Spring Boot, FastAPI),{" "}
-                    <span className="font-medium">AI/ML</span> (LangChain, LangGraph, Transformers), and{" "}
-                    <span className="font-medium">data science</span> (regression, clustering, A/B testing)
-                    to deliver production-ready solutions.
+                    with 2.5+ years of experience designing and deploying{" "}
+                    <span className="font-medium">scalable GenAI systems</span>,{" "}
+                    <span className="font-medium">distributed architectures</span>, and{" "}
+                    <span className="font-medium">LLM-powered automation</span>. I build
+                    production-grade applications using{" "}
+                    <span className="font-medium">TypeScript, Go, Python</span> with frameworks like{" "}
+                    <span className="font-medium">Next.js, FastAPI, Spring Boot</span>, and AI tools including{" "}
+                    <span className="font-medium">LangChain, LangGraph, PyTorch</span>. I also develop{" "}
+                    <span className="font-medium">iOS applications with SwiftUI</span> and deploy on{" "}
+                    <span className="font-medium">AWS infrastructure</span>.
                   </p>
 
                   {/* Impact Metrics */}
@@ -430,8 +436,7 @@ export default function Portfolio() {
                           </h5>
                           <div className="mb-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
                             <p className="text-sm text-gray-700 dark:text-gray-300">
-                              <strong className="text-blue-600 dark:text-blue-400">Grocify (Smart Grocery Platform):</strong> Co-led development of GenAI-powered retail platform featuring
-                              OCR receipt parsing, intelligent expiry alerts, and SmartCart recommendations. Built end-to-end solution serving major e-commerce clients.
+                              <strong className="text-blue-600 dark:text-blue-400">Fortune 500 Retail Clients:</strong> Fine-tuned and deployed domain-specialized LLMs (GPT-4, Gemini) for Macy's, Home Depot, and Walmart using PyTorch and Hugging Face Transformers, achieving 40% faster inference through custom training loops and LoRA adapters.
                             </p>
                           </div>
                         </div>
@@ -445,15 +450,15 @@ export default function Portfolio() {
                             {[
                               "Python",
                               "PyTorch",
+                              "Transformers",
                               "LangChain",
                               "LangGraph",
-                              "AI Agents",
-                              "Transformers",
                               "FastAPI",
                               "Next.js",
                               "TypeScript",
-                              "AWS",
+                              "AWS Lambda",
                               "Docker",
+                              "Kubernetes",
                             ].map((tech) => (
                               <span
                                 key={tech}
@@ -475,37 +480,37 @@ export default function Portfolio() {
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>GenAI Application Development:</strong> Built and deployed GenAI-driven enterprise applications using LLMs, LangChain, LangGraph, and autonomous AI Agents, automating complex workflows across multiple e-commerce clients
+                                <strong>LLM Fine-Tuning & Deployment:</strong> Fine-tuned and deployed domain-specialized LLMs (GPT-4, Gemini) using PyTorch and Hugging Face Transformers; optimized model performance with custom training loops and LoRA adapters achieving 40% faster inference
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>NLP Pipeline Development:</strong> Developed production NLP pipelines with PyTorch for text classification, sentiment analysis, and embeddings generation. Implemented comprehensive feature engineering and preprocessing workflows
+                                <strong>Multi-Model LLM Orchestration:</strong> Architected production platform integrating OpenAI, Anthropic Claude, and Google Gemini APIs with LangChain/LangGraph; implemented intelligent routing, prompt optimization, and fallback mechanisms reducing operational costs by 35%
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Data Science & Analytics:</strong> Applied A/B testing, regression analysis, and clustering techniques to improve personalization and targeting accuracy by 30%. Conducted statistical analysis for data-driven decision making
+                                <strong>RAG Pipeline Engineering:</strong> Built end-to-end RAG pipelines with vector embeddings using PyTorch, Pinecone, and FAISS; designed semantic chunking, hybrid search, and reranking strategies improving retrieval accuracy by 60%
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Multimodal AI Solutions:</strong> Created multimodal AI systems integrating OCR, vision models, and transformer embeddings for intelligent search, personalized recommendations, and demand forecasting
+                                <strong>Custom Embedding Models:</strong> Engineered custom embedding models with PyTorch for domain-specific knowledge bases; implemented contrastive learning and fine-tuning on 500K+ documents achieving 45% improvement in semantic search precision
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>ML Production & MLOps:</strong> Productionized ML pipelines using FastAPI + AWS + Docker stack with CI/CD automation. Built monitoring dashboards for tracking model drift and data quality metrics
+                                <strong>LLM Evaluation Framework:</strong> Developed evaluation framework with A/B testing, human-in-the-loop feedback, and automated metrics (BLEU, ROUGE, BERTScore); optimized prompt engineering reducing hallucination rates by 50%
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Grocify Platform Features:</strong> Implemented OCR-based receipt parsing, expiry tracking system, SmartCart recommendations engine, and RAG-based semantic search for enhanced user experience
+                                <strong>GenAI Microservices:</strong> Deployed GenAI microservices on AWS Lambda with Docker and Kubernetes; implemented model quantization, caching, and batching achieving sub-200ms latency at scale with 99.9% uptime
                               </div>
                             </li>
                           </ul>
@@ -519,10 +524,7 @@ export default function Portfolio() {
                           <div className="flex flex-wrap gap-2">
                             {[
                               "Macy's",
-                              "Bath & Body Works",
                               "Home Depot",
-                              "Kroger",
-                              "Costco",
                               "Walmart",
                             ].map((client) => (
                               <span
@@ -547,7 +549,7 @@ export default function Portfolio() {
                             Java Full Stack Developer Intern
                           </h4>
                           <span className="text-sm px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full font-medium">
-                            Jan 2022 – May 2022
+                            Jan 2022 – Apr 2022
                           </span>
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 font-medium mb-3">
@@ -564,10 +566,10 @@ export default function Portfolio() {
                               "Spring Boot",
                               "Angular",
                               "Java",
-                              "PostgreSQL",
                               "MongoDB",
+                              "Redis",
                               "Docker",
-                              "REST APIs",
+                              "Jenkins",
                             ].map((tech) => (
                               <span
                                 key={tech}
@@ -584,25 +586,19 @@ export default function Portfolio() {
                           <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                             <div>
-                              <strong>Full-Stack Development:</strong> Developed full-stack applications using Angular frontend and Spring Boot microservices backend, building responsive UI components and RESTful APIs for e-commerce platform
+                              <strong>RESTful Microservices:</strong> Designed and implemented RESTful microservices using Spring Boot (Spring MVC, Spring Data JPA, Spring Security) with MongoDB persistence; built Angular frontend with RxJS, NgRx state management, and Material UI components
                             </div>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                             <div>
-                              <strong>Microservices Architecture:</strong> Implemented Spring Boot + MongoDB microservices for authentication and catalog APIs, improving system performance by 20% through optimized service design
+                              <strong>Database Optimization:</strong> Optimized database layer with indexed queries, N+1 problem resolution, and Redis caching strategy; implemented connection pooling (HikariCP) achieving 20% query latency reduction and 30% concurrent request handling improvement
                             </div>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                             <div>
-                              <strong>Database Optimization:</strong> Wrote complex SQL queries and optimized database schemas using PostgreSQL, implementing efficient indexes and joins for analytics reporting and data retrieval
-                            </div>
-                          </li>
-                          <li className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
-                            <div>
-                              <strong>DevOps & Deployment:</strong> Worked on distributed data pipelines and collaborated on containerized deployments using Docker, ensuring scalable and maintainable application infrastructure
+                              <strong>DevOps Workflow:</strong> Established DevOps workflow with Docker multi-stage builds, Jenkins pipeline automation, and container orchestration; implemented automated unit/integration testing, blue-green deployments, and ELK stack monitoring
                             </div>
                           </li>
                         </ul>
@@ -756,12 +752,13 @@ export default function Portfolio() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
+                          "Go",
                           "Python",
                           "Java",
+                          "C++",
                           "TypeScript",
                           "JavaScript",
                           "Swift",
-                          "C++",
                           "SQL",
                         ].map((skill) => (
                           <span
@@ -813,8 +810,9 @@ export default function Portfolio() {
                         {[
                           "React",
                           "Next.js",
-                          "React Flow",
+                          "Angular",
                           "SwiftUI",
+                          "GraphQL",
                         ].map((skill) => (
                           <span
                             key={skill}
@@ -837,7 +835,7 @@ export default function Portfolio() {
                           "FastAPI",
                           "Spring Boot",
                           "REST APIs",
-                          "GraphQL",
+                          "Node.js",
                         ].map((skill) => (
                           <span
                             key={skill}
@@ -860,6 +858,7 @@ export default function Portfolio() {
                           "PostgreSQL",
                           "MongoDB",
                           "Redis",
+                          "GORM",
                         ].map((skill) => (
                           <span
                             key={skill}
@@ -879,10 +878,10 @@ export default function Portfolio() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "AWS (S3, Lambda, DynamoDB)",
+                          "AWS (S3, Lambda, EC2, DynamoDB)",
                           "Docker",
-                          "GitHub Actions",
                           "Kubernetes",
+                          "GitHub Actions",
                           "CI/CD",
                         ].map((skill) => (
                           <span
@@ -945,7 +944,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <div className="grid lg:grid-cols-3 gap-8 mb-12">
               {/* CogniFlow - AI Automation Platform */}
               <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
                 {/* Project Header */}
@@ -980,11 +979,7 @@ export default function Portfolio() {
                 <div className="p-8">
                   {/* Description */}
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
-                    Enterprise-grade AI workflow automation platform featuring a{" "}
-                    <strong>drag-and-drop visual builder</strong> with 10+ tool
-                    integrations including Slack, Gmail, and Notion. Built with{" "}
-                    <strong>RAG-based semantic search</strong>
-                    and intelligent orchestration using LangChain and LangGraph.
+                    Full-stack automation platform (<strong>66K+ LOC</strong>) with Next.js 15, TypeScript, PostgreSQL/pgvector featuring visual workflow builder, multi-model AI orchestration, RAG system, and OAuth integrations serving <strong>100+ users</strong>. Designed with multi-tenant SaaS, WebSocket collaboration achieving <strong>sub-200ms API latency</strong> and <strong>99.9% uptime</strong>.
                   </p>
 
                   {/* Key Features */}
@@ -996,29 +991,27 @@ export default function Portfolio() {
                     <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
-                        <span>Drag-and-drop workflow builder</span>
+                        <span>Graph-based workflow engine</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                        <span>
-                          10+ tool integrations (Slack, Gmail, Notion)
-                        </span>
+                        <span>Multi-model AI orchestration</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                        <span>RAG-based semantic search</span>
+                        <span>RAG with pgvector</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
-                        <span>Multi-step LLM orchestration</span>
+                        <span>OAuth 2.0 integrations</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
-                        <span>Real-time intelligent automation</span>
+                        <span>Multi-tenant SaaS architecture</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
-                        <span>Supabase RLS security</span>
+                        <span>99.9% uptime, sub-200ms latency</span>
                       </li>
                     </ul>
                   </div>
@@ -1031,9 +1024,10 @@ export default function Portfolio() {
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { name: "Next.js", color: "bg-black text-white" },
+                        { name: "Next.js 15", color: "bg-black text-white" },
                         { name: "TypeScript", color: "bg-blue-600 text-white" },
-                        { name: "Supabase", color: "bg-green-600 text-white" },
+                        { name: "PostgreSQL", color: "bg-blue-800 text-white" },
+                        { name: "pgvector", color: "bg-purple-700 text-white" },
                         {
                           name: "LangChain",
                           color: "bg-purple-600 text-white",
@@ -1042,9 +1036,8 @@ export default function Portfolio() {
                           name: "LangGraph",
                           color: "bg-indigo-600 text-white",
                         },
-                        { name: "GPT-4", color: "bg-emerald-600 text-white" },
+                        { name: "GPT-4/Claude/Gemini", color: "bg-emerald-600 text-white" },
                         { name: "Docker", color: "bg-blue-500 text-white" },
-                        { name: "PostgreSQL", color: "bg-blue-800 text-white" },
                       ].map((tech, index) => (
                         <span
                           key={index}
@@ -1063,10 +1056,7 @@ export default function Portfolio() {
                       Architecture Highlights
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Docker monorepo with CI/CD pipeline, implementing
-                      microservices architecture with Supabase Row Level
-                      Security (RLS) for enterprise-grade data protection and
-                      scalable deployment.
+                      Built graph-based workflow engine with conditional branching, parallel execution, error recovery achieving 95%+ success rates across 10K+ executions. Integrated multi-provider AI agents with function calling, intelligent routing, and cost tracking reducing operational costs by 40%.
                     </p>
                   </div>
 
@@ -1232,6 +1222,137 @@ export default function Portfolio() {
                     <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-lg opacity-50 cursor-not-allowed">
                       <Smartphone size={18} />
                       <span>iOS App (Demo)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* VelocityLLM - Distributed LLM Inference Engine */}
+              <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                {/* Project Header */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-orange-500 via-red-600 to-pink-600 p-8">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Zap className="text-white" size={28} />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white">
+                            VelocityLLM
+                          </h3>
+                          <p className="text-orange-100">
+                            Distributed LLM Inference Engine
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                          Backend
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Gradient Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white dark:from-gray-900 to-transparent"></div>
+                </div>
+
+                <div className="p-8">
+                  {/* Description */}
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
+                    Go-based distributed inference system achieving{" "}
+                    <strong>67% cost reduction</strong> vs OpenAI API with{" "}
+                    <strong>&lt; 200ms latency</strong>. Features RESTful microservices with PostgreSQL, Redis caching, and clean architecture principles. Scaled for reliability via Kubernetes orchestration, health checks, and observability middleware.
+                  </p>
+
+                  {/* Key Features */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <Zap size={18} className="text-orange-500" />
+                      Key Features
+                    </h4>
+                    <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
+                        <span>67% cost reduction vs OpenAI</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
+                        <span>Sub-200ms latency at scale</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-pink-500"></div>
+                        <span>RESTful microservices architecture</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+                        <span>Redis caching & PostgreSQL persistence</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                        <span>Kubernetes orchestration</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                        <span>Clean architecture & observability</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Tech Stack */}
+                  <div className="mb-8">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <Code2 size={18} className="text-orange-500" />
+                      Tech Stack
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { name: "Go", color: "bg-cyan-600 text-white" },
+                        { name: "PostgreSQL", color: "bg-blue-700 text-white" },
+                        { name: "Redis", color: "bg-red-600 text-white" },
+                        { name: "Kubernetes", color: "bg-blue-600 text-white" },
+                        { name: "Docker", color: "bg-blue-500 text-white" },
+                        { name: "GORM", color: "bg-gray-700 text-white" },
+                      ].map((tech, index) => (
+                        <span
+                          key={index}
+                          className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}
+                        >
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Architecture Highlights */}
+                  <div className="mb-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                      <Layers size={16} className="text-orange-500" />
+                      Architecture Highlights
+                    </h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      Implements clean architecture principles with separation of concerns, dependency injection, and domain-driven design. Features health checks, metrics collection, and distributed tracing for production-grade observability.
+                    </p>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-4">
+                    <a
+                      href="https://github.com/VighneshDev1411/velocityllm"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
+                    >
+                      <Github
+                        size={18}
+                        className="group-hover:scale-110 transition-transform"
+                      />
+                      <span>View Source</span>
+                    </a>
+                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg opacity-50 cursor-not-allowed">
+                      <Code2 size={18} />
+                      <span>API Demo (Coming Soon)</span>
                     </div>
                   </div>
                 </div>
