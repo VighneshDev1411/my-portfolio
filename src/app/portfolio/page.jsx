@@ -208,7 +208,7 @@ export default function Portfolio() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up delay-200">
-              Data & AI Engineering Analyst | Full-Stack Developer
+              AI Engineer & Software Developer @ UI Health | Full-Stack Developer
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-300">
@@ -243,7 +243,7 @@ export default function Portfolio() {
                 About Me
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Graduate student in CS with 2.5+ years building scalable GenAI systems, LLM-powered automation, and production applications
+                AI Engineer @ UI Health building healthcare search platforms. Graduate student in CS with 2.5+ years developing scalable GenAI systems, LLM-powered automation, and production applications
               </p>
             </div>
 
@@ -268,7 +268,12 @@ export default function Portfolio() {
                   </div>
 
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                    I'm a{" "}
+                    I'm currently an{" "}
+                    <span className="font-semibold text-green-600 dark:text-green-400">
+                      AI Engineer & Software Developer at UI Health
+                    </span>{" "}
+                    building healthcare search platforms with{" "}
+                    <span className="font-medium">Django REST, React 19, Elasticsearch, and Azure OpenAI</span>. I'm also a{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
                       Graduate student in Computer Science
                     </span>{" "}
@@ -278,28 +283,26 @@ export default function Portfolio() {
                     <span className="font-medium">LLM-powered automation</span>. I build
                     production-grade applications using{" "}
                     <span className="font-medium">TypeScript, Go, Python</span> with frameworks like{" "}
-                    <span className="font-medium">Next.js, FastAPI, Spring Boot</span>, and AI tools including{" "}
-                    <span className="font-medium">LangChain, LangGraph, PyTorch</span>. I also develop{" "}
-                    <span className="font-medium">iOS applications with SwiftUI</span> and deploy on{" "}
-                    <span className="font-medium">AWS infrastructure</span>.
+                    <span className="font-medium">Django, FastAPI, Next.js, Spring Boot</span>, and AI tools including{" "}
+                    <span className="font-medium">LangChain, LangGraph, PyTorch</span>.
                   </p>
 
                   {/* Impact Metrics */}
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center p-3 bg-white/50 dark:bg-gray-700/50 rounded-lg">
-                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                        45%
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        30x
                       </div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Accuracy Boost
+                        Faster Searches
                       </div>
                     </div>
                     <div className="text-center p-3 bg-white/50 dark:bg-gray-700/50 rounded-lg">
-                      <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                        35%
+                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        1.2s
                       </div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Efficiency Gain
+                        Search Latency
                       </div>
                     </div>
                   </div>
@@ -371,23 +374,19 @@ export default function Portfolio() {
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        Product enrichment (Gemini Vision + CrewAI) → catalog
-                        metadata accuracy ↑ <strong>45%</strong>
+                        Healthcare search platform (Django + Elasticsearch) → 1.2s latency, <strong>30x</strong> faster duplicate searches with Redis
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        Multi-step LLM orchestration → ops efficiency ↑{" "}
-                        <strong>25–35%</strong>, response accuracy ↑{" "}
-                        <strong>40%</strong>
+                        Event-driven architecture (Go microservice) → 30-min polling → real-time push notifications
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        Angular → Next.js migration → page loads{" "}
-                        <strong>~30%</strong> faster
+                        LLM fine-tuning & RAG pipelines → accuracy ↑ <strong>45-60%</strong>, ops cost ↓ <strong>35%</strong>
                       </span>
                     </li>
                   </ul>
@@ -411,6 +410,112 @@ export default function Portfolio() {
                   </div>
 
                   <div className="space-y-8">
+                    {/* UI Health - Graduate Hourly (Current) */}
+                    <div className="relative pl-6 border-l-2 border-green-200 dark:border-green-800">
+                      <div className="absolute -left-2 top-0 w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
+
+                      <div className="mb-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                          <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                            AI Engineer & Software Developer (Graduate Hourly)
+                          </h4>
+                          <span className="text-sm px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full font-medium">
+                            Nov 2025 – Present
+                          </span>
+                        </div>
+                        <p className="text-green-600 dark:text-green-400 font-medium mb-3">
+                          UI Health | Chicago, Illinois
+                        </p>
+
+                        {/* Key Projects */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center gap-2">
+                            <Zap size={16} className="text-yellow-500" />
+                            Major Projects & Impact:
+                          </h5>
+                          <div className="mb-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800">
+                            <p className="text-sm text-gray-700 dark:text-gray-300">
+                              <strong className="text-green-600 dark:text-green-400">Healthcare Search Platform:</strong> Developed the 1-Search platform aggregating data from 10+ medical sources achieving 1.2s fast-mode latency. Transformed data pipeline from 30-minute polling to event-driven, low-latency architecture.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Tech Stack */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                            Tech Stack:
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              "Django REST",
+                              "React 19",
+                              "Go (Chi)",
+                              "FastAPI",
+                              "Elasticsearch",
+                              "MongoDB",
+                              "Redis",
+                              "Azure OpenAI",
+                              "Azure Blob Storage",
+                              "Linux",
+                            ].map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-sm rounded-full border border-green-200 dark:border-green-800"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Detailed Achievements */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                            <Award size={16} className="text-green-500" />
+                            Key Contributions:
+                          </h5>
+                          <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Medical Search Platform:</strong> Developed the 1-Search platform aggregating data from 10+ medical sources using Django REST, React 19, and Elasticsearch, achieving 1.2s fast-mode latency
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Parallel Search Engine & RAG:</strong> Built a multi-threaded parallel search engine with adaptive timeouts; integrated Azure OpenAI RAG for personal document retrieval and summarization
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Redis Optimization:</strong> Implemented Redis caching enabling 30x faster duplicate searches (&lt;0.1s) through optimized key strategies
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Analytics Microservice:</strong> Created a FastAPI + MongoDB analytics microservice tracking latency, source reliability, and user behavior
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Event-Driven Architecture:</strong> Designed and deployed a Go-based Organizational Data Connector microservice (Chi framework) processing real-time Google Drive push notifications, syncing changed files to Azure Blob Storage, and triggering automated Cognitive Search re-indexing—transforming the pipeline from 30-minute polling to an event-driven, low-latency architecture
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Infrastructure Management:</strong> Deployed and operated services on Linux-based infrastructure, including containerized workloads, networking-level debugging, and system performance tuning
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
                     {/* Accenture */}
                     <div className="relative pl-6 border-l-2 border-blue-200 dark:border-blue-800">
                       <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
@@ -832,6 +937,7 @@ export default function Portfolio() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
+                          "Django REST",
                           "FastAPI",
                           "Spring Boot",
                           "REST APIs",
@@ -857,6 +963,7 @@ export default function Portfolio() {
                         {[
                           "PostgreSQL",
                           "MongoDB",
+                          "Elasticsearch",
                           "Redis",
                           "GORM",
                         ].map((skill) => (
@@ -879,6 +986,7 @@ export default function Portfolio() {
                       <div className="flex flex-wrap gap-2">
                         {[
                           "AWS (S3, Lambda, EC2, DynamoDB)",
+                          "Azure (OpenAI, Blob Storage, Cognitive Search)",
                           "Docker",
                           "Kubernetes",
                           "GitHub Actions",
