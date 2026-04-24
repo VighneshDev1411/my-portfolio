@@ -3,8 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   ChevronDown,
-  Github,
-  Linkedin,
   Mail,
   ExternalLink,
   Moon,
@@ -23,6 +21,8 @@ import {
   Brain,
   Zap,
   Award,
+  Github as GithubIcon,
+  Linkedin as LinkedinIcon,
 } from "lucide-react";
 
 export default function Portfolio() {
@@ -208,11 +208,11 @@ export default function Portfolio() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up delay-200">
-              AI Engineer & Software Developer @ UI Health | Full-Stack Developer
+              AI Engineer & Software Developer @ UI Health | Full-Stack & AI Engineer
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-300">
-              Graduate student in Computer Science with 2.5+ years of experience designing and deploying scalable GenAI, backend, full-stack, and iOS systems. Skilled in distributed architectures, LLM-powered automation, and production-grade applications using TypeScript, Go, FastAPI, NextJS, SwiftUI, LangChain, and AWS.
+              Graduate student in Computer Science with 3.5+ years of industry experience designing and deploying scalable GenAI, RAG pipelines, distributed systems, and full-stack applications. Previously at Accenture building AI products for Fortune 500 retailers. Skilled in Go, Python, TypeScript, LangGraph, Azure OpenAI, and production-grade cloud infrastructure.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-400">
@@ -272,19 +272,17 @@ export default function Portfolio() {
                     <span className="font-semibold text-green-600 dark:text-green-400">
                       AI Engineer & Software Developer at UI Health
                     </span>{" "}
-                    building healthcare search platforms with{" "}
-                    <span className="font-medium">Django REST, React 19, Elasticsearch, and Azure OpenAI</span>. I'm also a{" "}
+                    building healthcare AI search platforms with{" "}
+                    <span className="font-medium">Django, Go, React 19, Azure OpenAI, and Azure AI Search</span>. Previously a{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
-                      Graduate student in Computer Science
+                      Data & AI Engineering Analyst at Accenture
                     </span>{" "}
-                    with 2.5+ years of experience designing and deploying{" "}
-                    <span className="font-medium">scalable GenAI systems</span>,{" "}
-                    <span className="font-medium">distributed architectures</span>, and{" "}
-                    <span className="font-medium">LLM-powered automation</span>. I build
-                    production-grade applications using{" "}
-                    <span className="font-medium">TypeScript, Go, Python</span> with frameworks like{" "}
-                    <span className="font-medium">Django, FastAPI, Next.js, Spring Boot</span>, and AI tools including{" "}
-                    <span className="font-medium">LangChain, LangGraph, PyTorch</span>.
+                    (3 years) delivering GenAI products for Fortune 500 retailers including{" "}
+                    <span className="font-medium">Macy's, Home Depot, Walmart, and Costco</span>. I build
+                    production-grade AI systems using{" "}
+                    <span className="font-medium">Go, Python, TypeScript</span> with{" "}
+                    <span className="font-medium">LangGraph, FastAPI, Next.js</span>, and AI infrastructure including{" "}
+                    <span className="font-medium">pgvector, Voyage AI, vLLM, and Elasticsearch hybrid retrieval</span>.
                   </p>
 
                   {/* Impact Metrics */}
@@ -327,7 +325,7 @@ export default function Portfolio() {
                       className="flex items-center justify-center gap-2 p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300 group"
                       aria-label="GitHub"
                     >
-                      <Github
+                      <GithubIcon
                         size={16}
                         className="text-gray-800 dark:text-gray-200 group-hover:scale-110 transition-transform"
                       />
@@ -340,7 +338,7 @@ export default function Portfolio() {
                       className="flex items-center justify-center gap-2 p-3 bg-white dark:bg-gray-700 rounded-lg hover:shadow-md transition-all duration-300 group"
                       aria-label="LinkedIn"
                     >
-                      <Linkedin
+                      <LinkedinIcon
                         size={16}
                         className="text-blue-700 group-hover:scale-110 transition-transform"
                       />
@@ -374,19 +372,25 @@ export default function Portfolio() {
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        Healthcare search platform (Django + Elasticsearch) → 1.2s latency, <strong>30x</strong> faster duplicate searches with Redis
+                        1-Search: 14 concurrent medical scrapers → <strong>sub-2s</strong> cached latency, <strong>30x</strong> faster with Redis; ~95% API quota reduction via Go webhook sync
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        Event-driven architecture (Go microservice) → 30-min polling → real-time push notifications
+                        VelocityLLM: <strong>67% cost reduction</strong> vs OpenAI API via semantic caching (85% cosine similarity) + complexity-based routing
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        LLM fine-tuning & RAG pipelines → accuracy ↑ <strong>45-60%</strong>, ops cost ↓ <strong>35%</strong>
+                        CS421 RAG research: <strong>2.2× better</strong> than published baseline using a <strong>90× smaller</strong> model via multi-agent debate architecture
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
+                      <span>
+                        Accenture: GenAI + RAG pipelines (Elasticsearch hybrid BM25 + dense) for <strong>Macy's, Home Depot, Walmart, Costco</strong>
                       </span>
                     </li>
                   </ul>
@@ -484,29 +488,41 @@ export default function Portfolio() {
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Parallel Search Engine & RAG:</strong> Built a multi-threaded parallel search engine with adaptive timeouts; integrated Azure OpenAI RAG for personal document retrieval and summarization
+                                <strong>Production-Grade RAG System:</strong> Built a production-grade RAG (Retrieval-Augmented Generation) system for organizational knowledge search using Azure AI Search and GPT-4o. Implemented 14 advanced features including hybrid search with 3-tier fallback, intelligent query enhancement, real-time confidence scoring (0-100), multi-turn conversations, query caching, and recency-weighted ranking algorithms. Engineered custom Azure skillsets with DocumentExtractionSkill and text chunking pipelines to extract and index full multi-page PDFs (30K+ chars), enabling highly accurate, citation-backed answers from medical protocols. Achieved 90%+ confidence scores on protocol queries, 304 documents indexed with full content extraction, and sub-5 second query response time with caching
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Redis Optimization:</strong> Implemented Redis caching enabling 30x faster duplicate searches (&lt;0.1s) through optimized key strategies
+                                <strong>Excel File Search Enhancement:</strong> Fixed Excel file search end-to-end—enhanced query handling (removed quotes for keyword search), implemented query-dependent boosting (2x for spreadsheets), fixed base64 path decoding for proper source classification, and enabled citations for organizational data. Excel files now searchable with correct answers displayed
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Analytics Microservice:</strong> Created a FastAPI + MongoDB analytics microservice tracking latency, source reliability, and user behavior
+                                <strong>Real-Time Drive Automation System:</strong> Built complete automation system eliminating manual sync operations. Implemented real-time webhook sync from Google Drive (&lt; 5 sec latency) via enhanced Go connector with diagnostics and monitoring endpoint, plus scheduled backup sync every 3 hours. Automatic deletion from both blob storage and search index when files removed from Drive
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Event-Driven Architecture:</strong> Designed and deployed a Go-based Organizational Data Connector microservice (Chi framework) processing real-time Google Drive push notifications, syncing changed files to Azure Blob Storage, and triggering automated Cognitive Search re-indexing—transforming the pipeline from 30-minute polling to an event-driven, low-latency architecture
+                                <strong>Enterprise Cloud Data Connector:</strong> Developed an enterprise cloud data connector enabling seamless real-time synchronization between Google Drive and Azure infrastructure. Engineered robust async webhook handling with mutex-based concurrency control, supporting critical operations (add/rename/delete) with 99.9% reliability and &lt;10 second latency. Transformed the pipeline from 30-minute polling to an event-driven, low-latency architecture
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Redis Optimization:</strong> Implemented Redis caching enabling 30x faster duplicate searches (&lt;0.1s) through optimized key strategies
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Analytics Microservice:</strong> Created a FastAPI + MongoDB analytics microservice tracking latency, source reliability, and user behavior
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-2 flex-shrink-0"></div>
                               <div>
                                 <strong>Infrastructure Management:</strong> Deployed and operated services on Linux-based infrastructure, including containerized workloads, networking-level debugging, and system performance tuning
                               </div>
@@ -541,7 +557,7 @@ export default function Portfolio() {
                           </h5>
                           <div className="mb-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
                             <p className="text-sm text-gray-700 dark:text-gray-300">
-                              <strong className="text-blue-600 dark:text-blue-400">Fortune 500 Retail Clients:</strong> Fine-tuned and deployed domain-specialized LLMs (GPT-4, Gemini) for Macy's, Home Depot, and Walmart using PyTorch and Hugging Face Transformers, achieving 40% faster inference through custom training loops and LoRA adapters.
+                              <strong className="text-blue-600 dark:text-blue-400">Fortune 500 Retail AI:</strong> Built end-to-end RAG pipelines integrating Azure OpenAI embeddings with Elasticsearch hybrid retrieval (BM25 + dense vector) for semantic product search and GenAI-powered catalog intelligence across Macy's, Home Depot, Walmart, and Costco.
                             </p>
                           </div>
                         </div>
@@ -554,16 +570,17 @@ export default function Portfolio() {
                           <div className="flex flex-wrap gap-2">
                             {[
                               "Python",
-                              "PyTorch",
-                              "Transformers",
-                              "LangChain",
-                              "LangGraph",
                               "FastAPI",
-                              "Next.js",
+                              "Azure OpenAI",
+                              "Elasticsearch",
+                              "Azure Data Factory",
+                              "Databricks",
+                              "React/Next.js",
                               "TypeScript",
-                              "AWS Lambda",
+                              "Azure DevOps",
+                              "GitHub Actions",
+                              "Azure Blob Storage",
                               "Docker",
-                              "Kubernetes",
                             ].map((tech) => (
                               <span
                                 key={tech}
@@ -585,37 +602,43 @@ export default function Portfolio() {
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>LLM Fine-Tuning & Deployment:</strong> Fine-tuned and deployed domain-specialized LLMs (GPT-4, Gemini) using PyTorch and Hugging Face Transformers; optimized model performance with custom training loops and LoRA adapters achieving 40% faster inference
+                                <strong>Hybrid RAG Pipelines:</strong> Engineered end-to-end RAG pipelines integrating Azure OpenAI embeddings with Elasticsearch hybrid retrieval (BM25 + dense vector), powering semantic search and product discovery for Macy's, Home Depot, Walmart, and Costco
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Multi-Model LLM Orchestration:</strong> Architected production platform integrating OpenAI, Anthropic Claude, and Google Gemini APIs with LangChain/LangGraph; implemented intelligent routing, prompt optimization, and fallback mechanisms reducing operational costs by 35%
+                                <strong>GenAI Catalog Intelligence:</strong> Built GenAI-powered recommendation and catalog intelligence tools in Python/FastAPI on Azure, enabling natural language product search, automated tagging, and inventory Q&A across million-SKU retail datasets
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>RAG Pipeline Engineering:</strong> Built end-to-end RAG pipelines with vector embeddings using PyTorch, Pinecone, and FAISS; designed semantic chunking, hybrid search, and reranking strategies improving retrieval accuracy by 60%
+                                <strong>ETL & Data Engineering:</strong> Designed ETL pipelines using Azure Data Factory and Databricks to ingest, transform, and index large-scale retail transaction and product data into vector and relational stores for downstream LLM consumption
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>Custom Embedding Models:</strong> Engineered custom embedding models with PyTorch for domain-specific knowledge bases; implemented contrastive learning and fine-tuning on 500K+ documents achieving 45% improvement in semantic search precision
+                                <strong>AI Dashboards:</strong> Developed full-stack AI dashboards in React/Next.js surfacing model predictions, search analytics, and GenAI output monitoring to business stakeholders across 4 retail enterprise engagements
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>LLM Evaluation Framework:</strong> Developed evaluation framework with A/B testing, human-in-the-loop feedback, and automated metrics (BLEU, ROUGE, BERTScore); optimized prompt engineering reducing hallucination rates by 50%
+                                <strong>Client Delivery:</strong> Collaborated with solution architects and Fortune 500 client product teams to translate business requirements into AI product roadmaps, sprint plans, and phased delivery milestones
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
                               <div>
-                                <strong>GenAI Microservices:</strong> Deployed GenAI microservices on AWS Lambda with Docker and Kubernetes; implemented model quantization, caching, and batching achieving sub-200ms latency at scale with 99.9% uptime
+                                <strong>CI/CD & Compliance:</strong> Implemented CI/CD pipelines via Azure DevOps and GitHub Actions, enforcing compliance guardrails and automating model deployment workflows across cloud-native retail infrastructure
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Prompt Engineering & Evaluation:</strong> Conducted prompt engineering, evaluation, and iterative fine-tuning of LLM workflows, improving response relevance and reducing hallucination rates across customer-facing GenAI products
                               </div>
                             </li>
                           </ul>
@@ -631,6 +654,7 @@ export default function Portfolio() {
                               "Macy's",
                               "Home Depot",
                               "Walmart",
+                              "Costco",
                             ].map((client) => (
                               <span
                                 key={client}
@@ -817,7 +841,7 @@ export default function Portfolio() {
                           rel="noreferrer"
                           className="inline-flex items-center gap-2 text-sm px-4 py-2 rounded-lg bg-white dark:bg-gray-700 hover:shadow-md transition-all duration-300 font-medium"
                         >
-                          <Github size={16} />
+                          <GithubIcon size={16} />
                           GitHub
                         </a>
                         <a
@@ -891,8 +915,13 @@ export default function Portfolio() {
                           "LangGraph",
                           "AI Agents",
                           "OpenAI APIs",
-                          "Regression",
-                          "Clustering",
+                          "Anthropic Claude",
+                          "RAG Pipelines",
+                          "vLLM",
+                          "Voyage AI",
+                          "FAISS",
+                          "BM25",
+                          "Prompt Engineering",
                           "A/B Testing",
                         ].map((skill) => (
                           <span
@@ -942,6 +971,11 @@ export default function Portfolio() {
                           "Spring Boot",
                           "REST APIs",
                           "Node.js",
+                          "gRPC",
+                          "Gin (Go)",
+                          "arq",
+                          "BullMQ",
+                          "WebSockets / SSE",
                         ].map((skill) => (
                           <span
                             key={skill}
@@ -962,10 +996,14 @@ export default function Portfolio() {
                       <div className="flex flex-wrap gap-2">
                         {[
                           "PostgreSQL",
+                          "pgvector",
                           "MongoDB",
                           "Elasticsearch",
+                          "Azure AI Search",
+                          "Supabase",
                           "Redis",
                           "GORM",
+                          "SQLAlchemy",
                         ].map((skill) => (
                           <span
                             key={skill}
@@ -985,12 +1023,16 @@ export default function Portfolio() {
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          "AWS (S3, Lambda, EC2, DynamoDB)",
-                          "Azure (OpenAI, Blob Storage, Cognitive Search)",
+                          "Azure (OpenAI, AI Search, Blob, App Service)",
+                          "Azure Data Factory",
+                          "Databricks",
+                          "Azure DevOps",
+                          "AWS (S3, Lambda, EC2)",
                           "Docker",
                           "Kubernetes",
                           "GitHub Actions",
-                          "CI/CD",
+                          "Vercel",
+                          "Render",
                         ].map((skill) => (
                           <span
                             key={skill}
@@ -1176,7 +1218,7 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
                     >
-                      <Github
+                      <GithubIcon
                         size={18}
                         className="group-hover:scale-110 transition-transform"
                       />
@@ -1321,7 +1363,7 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
                     >
-                      <Github
+                      <GithubIcon
                         size={18}
                         className="group-hover:scale-110 transition-transform"
                       />
@@ -1452,7 +1494,7 @@ export default function Portfolio() {
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
                     >
-                      <Github
+                      <GithubIcon
                         size={18}
                         className="group-hover:scale-110 transition-transform"
                       />
@@ -1461,6 +1503,231 @@ export default function Portfolio() {
                     <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg opacity-50 cursor-not-allowed">
                       <Code2 size={18} />
                       <span>API Demo (Coming Soon)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2: Noto + CS421 */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+
+              {/* Noto - Autonomous AI Code Review */}
+              <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 p-8">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Code2 className="text-white" size={28} />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white">Noto</h3>
+                          <p className="text-purple-100">Autonomous AI Code Review SaaS</p>
+                        </div>
+                      </div>
+                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                        AI Agents
+                      </span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white dark:from-gray-900 to-transparent"></div>
+                </div>
+
+                <div className="p-8">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
+                    Production SaaS that autonomously reviews GitHub PRs using a <strong>LangGraph multi-agent pipeline</strong> — 4 parallel Claude Sonnet specialists (Security, Bug, Performance, Style) with a Haiku Planner + Judge confidence filter. Features developer feedback few-shot learning loop and agentic auto-fix PR generation.
+                  </p>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <Zap size={18} className="text-violet-500" />
+                      Key Features
+                    </h4>
+                    <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-violet-500"></div>
+                        <span>4 parallel specialist agents (LangGraph)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+                        <span>Haiku Judge confidence scoring (0–100)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
+                        <span>RAG with Voyage AI code embeddings</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                        <span>Developer feedback → few-shot learning</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-pink-500"></div>
+                        <span>Agentic auto-fix PR generation</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                        <span>Real-time SSE dashboard (Redis Pub/Sub)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <Code2 size={18} className="text-violet-500" />
+                      Tech Stack
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { name: "FastAPI", color: "bg-green-700 text-white" },
+                        { name: "LangGraph", color: "bg-indigo-600 text-white" },
+                        { name: "Claude Sonnet/Haiku", color: "bg-purple-700 text-white" },
+                        { name: "pgvector", color: "bg-blue-700 text-white" },
+                        { name: "Voyage AI", color: "bg-violet-600 text-white" },
+                        { name: "Next.js", color: "bg-black text-white" },
+                        { name: "arq + Redis", color: "bg-red-600 text-white" },
+                        { name: "GitHub API", color: "bg-gray-800 text-white" },
+                      ].map((tech, i) => (
+                        <span key={i} className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}>
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                      <Layers size={16} className="text-violet-500" />
+                      Architecture Highlights
+                    </h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      Two-layer AI quality filter (Planner routes domains + Judge filters noise) before posting to GitHub. Feedback loop stores accepted/false-positive signals per repo/domain and injects as few-shot examples — continuous specialization without retraining.
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <a
+                      href="https://github.com/VighneshDev1411/noto"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
+                    >
+                      <GithubIcon size={18} className="group-hover:scale-110 transition-transform" />
+                      <span>View Source</span>
+                    </a>
+                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg opacity-60 cursor-not-allowed">
+                      <ExternalLink size={18} />
+                      <span>Demo (Coming Soon)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* CS421 - Multi-Document RAG Research */}
+              <div className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-600 p-8">
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-3 bg-white/20 rounded-xl backdrop-blur-sm">
+                          <Brain className="text-white" size={28} />
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-white">CS421 RAG Pipeline</h3>
+                          <p className="text-teal-100">Multi-Document RAG Research</p>
+                        </div>
+                      </div>
+                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                        Research
+                      </span>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white dark:from-gray-900 to-transparent"></div>
+                </div>
+
+                <div className="p-8">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
+                    Evaluated <strong>12 RAG systems</strong> on HotpotQA (multi-hop) and RAMDocs (adversarial misinformation) using a unified hybrid retrieval pipeline. Achieved <strong>2.2× better performance than the published MADAM-RAG baseline</strong> with a model <strong>90× smaller</strong> through multi-agent debate architecture — all inference-only, no fine-tuning.
+                  </p>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <Award size={18} className="text-teal-500" />
+                      Key Results
+                    </h4>
+                    <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-teal-500"></div>
+                        <span>52.5% Token F1 on HotpotQA (↑ from 14.9%)</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-cyan-500"></div>
+                        <span>71.8% Exact Match on RAMDocs</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                        <span>BM25 + FAISS dense + RRF fusion</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
+                        <span>Multi-agent debate for misinfo defense</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
+                        <span>Dynamic top-k with variance gating</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                        <span>LLM-driven two-hop retrieval</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mb-8">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                      <Code2 size={18} className="text-teal-500" />
+                      Tech Stack
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {[
+                        { name: "Python", color: "bg-blue-600 text-white" },
+                        { name: "PyTorch", color: "bg-orange-600 text-white" },
+                        { name: "HuggingFace", color: "bg-yellow-600 text-white" },
+                        { name: "FAISS", color: "bg-teal-700 text-white" },
+                        { name: "BM25", color: "bg-cyan-700 text-white" },
+                        { name: "flan-t5-large", color: "bg-purple-700 text-white" },
+                        { name: "SentenceTransformers", color: "bg-indigo-600 text-white" },
+                      ].map((tech, i) => (
+                        <span key={i} className={`px-3 py-1 rounded-full text-xs font-medium ${tech.color}`}>
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mb-8 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+                      <Layers size={16} className="text-teal-500" />
+                      Key Insight
+                    </h4>
+                    <p className="text-sm text-gray-700 dark:text-gray-300">
+                      Self-reflection alone failed (−7.4pp — small models lack metacognitive ability), but external disagreement signals via multi-agent debate yielded +22.6pp, enabling a 780M-param model to outperform a 70B model on adversarial misinformation.
+                    </p>
+                  </div>
+
+                  <div className="flex gap-4">
+                    <a
+                      href="https://github.com/VighneshDev1411/cs421"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
+                    >
+                      <GithubIcon size={18} className="group-hover:scale-110 transition-transform" />
+                      <span>View Source</span>
+                    </a>
+                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-lg opacity-60 cursor-not-allowed">
+                      <Code2 size={18} />
+                      <span>Research Paper</span>
                     </div>
                   </div>
                 </div>
@@ -1518,7 +1785,7 @@ export default function Portfolio() {
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium"
                   >
-                    <Github size={18} />
+                    <GithubIcon size={18} />
                     View All Repositories
                   </a>
                   <a
@@ -1556,7 +1823,7 @@ export default function Portfolio() {
               </div>
 
               <div className="p-6">
-                <Github
+                <GithubIcon
                   size={32}
                   className="text-blue-600 dark:text-blue-400 mx-auto mb-4"
                 />
@@ -1567,7 +1834,7 @@ export default function Portfolio() {
               </div>
 
               <div className="p-6">
-                <Linkedin
+                <LinkedinIcon
                   size={32}
                   className="text-blue-600 dark:text-blue-400 mx-auto mb-4"
                 />
