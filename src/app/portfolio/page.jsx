@@ -1500,10 +1500,15 @@ export default function Portfolio() {
                       />
                       <span>View Source</span>
                     </a>
-                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg opacity-50 cursor-not-allowed">
-                      <Code2 size={18} />
-                      <span>API Demo (Coming Soon)</span>
-                    </div>
+                    <a
+                      href="https://velocityllm-frontend.onrender.com"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg hover:from-orange-700 hover:to-red-700 transition-all font-medium group"
+                    >
+                      <Play size={18} className="group-hover:scale-110 transition-transform" />
+                      <span>Live Demo</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1615,10 +1620,15 @@ export default function Portfolio() {
                       <GithubIcon size={18} className="group-hover:scale-110 transition-transform" />
                       <span>View Source</span>
                     </a>
-                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg opacity-60 cursor-not-allowed">
-                      <ExternalLink size={18} />
-                      <span>Demo (Coming Soon)</span>
-                    </div>
+                    <a
+                      href="https://noto-ecru.vercel.app"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-violet-600 to-purple-600 text-white rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all font-medium group"
+                    >
+                      <Play size={18} className="group-hover:scale-110 transition-transform" />
+                      <span>Live Demo</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -1717,7 +1727,7 @@ export default function Portfolio() {
 
                   <div className="flex gap-4">
                     <a
-                      href="https://github.com/VighneshDev1411/cs421"
+                      href="https://github.com/VighneshDev1411/rag-pipeline"
                       target="_blank"
                       rel="noreferrer"
                       className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors font-medium group"
@@ -1725,9 +1735,9 @@ export default function Portfolio() {
                       <GithubIcon size={18} className="group-hover:scale-110 transition-transform" />
                       <span>View Source</span>
                     </a>
-                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-lg opacity-60 cursor-not-allowed">
+                    <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-teal-600 to-cyan-600 text-white rounded-lg opacity-50 cursor-not-allowed">
                       <Code2 size={18} />
-                      <span>Research Paper</span>
+                      <span>Report (Private)</span>
                     </div>
                   </div>
                 </div>
