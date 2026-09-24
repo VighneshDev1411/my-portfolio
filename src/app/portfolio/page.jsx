@@ -616,48 +616,6 @@ export default function Portfolio() {
                           </h5>
                           <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
                             <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>Hybrid RAG Pipelines:</strong> Engineered end-to-end RAG pipelines integrating Azure OpenAI embeddings with Elasticsearch hybrid retrieval (BM25 + dense vector), powering semantic search and product discovery for Macy's, Home Depot, Walmart, and Costco
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>GenAI Catalog Intelligence:</strong> Built GenAI-powered recommendation and catalog intelligence tools in Python/FastAPI on Azure, enabling natural language product search, automated tagging, and inventory Q&A across million-SKU retail datasets
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>ETL & Data Engineering:</strong> Designed ETL pipelines using Azure Data Factory and Databricks to ingest, transform, and index large-scale retail transaction and product data into vector and relational stores for downstream LLM consumption
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>AI Dashboards:</strong> Developed full-stack AI dashboards in React/Next.js surfacing model predictions, search analytics, and GenAI output monitoring to business stakeholders across 4 retail enterprise engagements
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>Client Delivery:</strong> Collaborated with solution architects and Fortune 500 client product teams to translate business requirements into AI product roadmaps, sprint plans, and phased delivery milestones
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>CI/CD & Compliance:</strong> Implemented CI/CD pipelines via Azure DevOps and GitHub Actions, enforcing compliance guardrails and automating model deployment workflows across cloud-native retail infrastructure
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>Prompt Engineering & Evaluation:</strong> Conducted prompt engineering, evaluation, and iterative fine-tuning of LLM workflows, improving response relevance and reducing hallucination rates across customer-facing GenAI products
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
                               <div>
                                 <strong>RAG-Based Semantic Search:</strong> Built RAG-based semantic search systems using PyTorch and vector embeddings, enabling faster and more accurate product/document search for Fortune 500 retail clients including Macy's, Home Depot, Walmart, and Costco — replacing slower, less relevant keyword-based search
