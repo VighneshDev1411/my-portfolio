@@ -719,19 +719,19 @@ export default function Portfolio() {
                           <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                             <div>
-                              <strong>RESTful Microservices:</strong> Designed and implemented RESTful microservices using Spring Boot (Spring MVC, Spring Data JPA, Spring Security) with MongoDB persistence; built Angular frontend with RxJS, NgRx state management, and Material UI components
+                              Developed and maintained web application features using Angular for the frontend and Spring Boot for the backend, as part of a Java full-stack engineering internship
                             </div>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                             <div>
-                              <strong>Database Optimization:</strong> Optimized database layer with indexed queries, N+1 problem resolution, and Redis caching strategy; implemented connection pooling (HikariCP) achieving 20% query latency reduction and 30% concurrent request handling improvement
+                              Built and integrated RESTful APIs using Spring Boot, connecting backend services with Angular-based frontend components to deliver functional end-to-end features
                             </div>
                           </li>
                           <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                             <div>
-                              <strong>DevOps Workflow:</strong> Established DevOps workflow with Docker multi-stage builds, Jenkins pipeline automation, and container orchestration; implemented automated unit/integration testing, blue-green deployments, and ELK stack monitoring
+                              Completed structured training and hands-on project work in Java, Spring Boot, and Angular, gaining foundational experience in full-stack software development within a professional engineering environment
                             </div>
                           </li>
                         </ul>
