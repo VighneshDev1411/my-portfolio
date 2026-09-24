@@ -213,8 +213,8 @@ export default function Portfolio() {
                     <span className="font-semibold text-green-600 dark:text-green-400">
                       AI Full Stack Engineering Co-Op at Southern Illinois Healthcare
                     </span>{" "}
-                    continuing development of the 1-Search platform with{" "}
-                    <span className="font-medium">Django, Go, React 19, Azure OpenAI, and Azure AI Search</span>, after starting the same platform as a{" "}
+                    building AI and full-stack features for the 1-Search medical search platform with{" "}
+                    <span className="font-medium">Django, Go, React 19, Azure OpenAI, and Azure AI Search</span>. I originally built that platform as a{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
                       Graduate Research Assistant at UI Health
                     </span>{" "}
@@ -384,7 +384,7 @@ export default function Portfolio() {
                           </h5>
                           <div className="mb-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800">
                             <p className="text-sm text-gray-700 dark:text-gray-300">
-                              <strong className="text-green-600 dark:text-green-400">1-Search Platform Migration:</strong> Continuing development of the 1-Search medical search platform following its transition to a new health system. Authored the Azure/vendor access and integration checklist for migrating the platform's search index, storage, and OAuth integrations to the new organization.
+                              <strong className="text-green-600 dark:text-green-400">AI &amp; Full-Stack Engineering on 1-Search:</strong> Build AI-powered search features and full-stack functionality for the 1-Search medical search platform at its new health system home. Authored the Azure/vendor access and integration checklist for migrating the platform's search index, storage, and OAuth integrations to the new organization.
                             </p>
                           </div>
                         </div>
@@ -413,6 +413,28 @@ export default function Portfolio() {
                               </span>
                             ))}
                           </div>
+                        </div>
+
+                        {/* Detailed Achievements */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
+                            <Award size={16} className="text-green-500" />
+                            Key Contributions:
+                          </h5>
+                          <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Production-Grade RAG System (AI):</strong> Built a production-grade RAG (Retrieval-Augmented Generation) system for organizational knowledge search using Azure AI Search and GPT-4o. Implemented 14 advanced features including hybrid search with 3-tier fallback, intelligent query enhancement, real-time confidence scoring (0-100), multi-turn conversations, query caching, and recency-weighted ranking algorithms. Engineered custom Azure skillsets with DocumentExtractionSkill and text chunking pipelines to extract and index full multi-page PDFs (30K+ chars), enabling highly accurate, citation-backed answers from medical protocols. Achieved 90%+ confidence scores on protocol queries, 304 documents indexed with full content extraction, and sub-5 second query response time with caching
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Excel File Search Enhancement (Full-Stack):</strong> Fixed Excel file search end-to-end—enhanced query handling (removed quotes for keyword search), implemented query-dependent boosting (2x for spreadsheets), fixed base64 path decoding for proper source classification, and enabled citations for organizational data. Excel files now searchable with correct answers displayed
+                              </div>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -486,18 +508,6 @@ export default function Portfolio() {
                               <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                               <div>
                                 <strong>Medical Search Platform:</strong> Developed the 1-Search platform aggregating data from 10+ medical sources using Django REST, React 19, and Elasticsearch, achieving 1.2s fast-mode latency
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>Production-Grade RAG System:</strong> Built a production-grade RAG (Retrieval-Augmented Generation) system for organizational knowledge search using Azure AI Search and GPT-4o. Implemented 14 advanced features including hybrid search with 3-tier fallback, intelligent query enhancement, real-time confidence scoring (0-100), multi-turn conversations, query caching, and recency-weighted ranking algorithms. Engineered custom Azure skillsets with DocumentExtractionSkill and text chunking pipelines to extract and index full multi-page PDFs (30K+ chars), enabling highly accurate, citation-backed answers from medical protocols. Achieved 90%+ confidence scores on protocol queries, 304 documents indexed with full content extraction, and sub-5 second query response time with caching
-                              </div>
-                            </li>
-                            <li className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
-                              <div>
-                                <strong>Excel File Search Enhancement:</strong> Fixed Excel file search end-to-end—enhanced query handling (removed quotes for keyword search), implemented query-dependent boosting (2x for spreadsheets), fixed base64 path decoding for proper source classification, and enabled citations for organizational data. Excel files now searchable with correct answers displayed
                               </div>
                             </li>
                             <li className="flex items-start gap-2">
