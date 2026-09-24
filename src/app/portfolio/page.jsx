@@ -72,65 +72,6 @@ export default function Portfolio() {
     }
   }, [darkMode, isLoaded]);
 
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "A full-stack e-commerce solution built with Next.js, featuring user authentication, payment integration, and admin dashboard.",
-      tech: ["Next.js", "TypeScript", "Prisma", "Stripe"],
-      github: "#",
-      demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team features.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
-      github: "#",
-      demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-    },
-    {
-      title: "Weather Analytics Dashboard",
-      description:
-        "A data visualization dashboard showing weather patterns and analytics with interactive charts and maps.",
-      tech: ["Vue.js", "D3.js", "Python", "FastAPI"],
-      github: "#",
-      demo: "#",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
-    },
-  ];
-
-  const skills = [
-    {
-      name: "Frontend Development",
-      icon: Code,
-      items: ["React", "Next.js", "TypeScript"],
-    },
-    {
-      name: "Backend Development",
-      icon: Code,
-      items: [
-        "Node.js",
-        "Python",
-        "PostgreSQL",
-        "MongoDB",
-        "FastAPI",
-        "Supabase",
-      ],
-    },
-    { name: "UI/UX Design", icon: Palette, items: ["Figma", "Tailwind CSS"] },
-    {
-      name: "Mobile Development",
-      icon: Smartphone,
-      items: ["React Native", "iOS", "Android"],
-    },
-  ];
-
   // Better loading state
   if (!isLoaded) {
     return (
@@ -208,7 +149,7 @@ export default function Portfolio() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up delay-200">
-              AI Engineer & Software Developer @ UI Health | Full-Stack & AI Engineer
+              AI Full Stack Engineering Co-Op @ Southern Illinois Healthcare | Full-Stack & AI Engineer
             </p>
 
             <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up delay-300">
@@ -243,7 +184,7 @@ export default function Portfolio() {
                 About Me
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                AI Engineer @ UI Health building healthcare search platforms. Graduate student in CS with 2.5+ years developing scalable GenAI systems, LLM-powered automation, and production applications
+                AI Full Stack Engineering Co-Op @ Southern Illinois Healthcare building healthcare search platforms. Graduate student in CS with 2.5+ years developing scalable GenAI systems, LLM-powered automation, and production applications
               </p>
             </div>
 
@@ -270,10 +211,14 @@ export default function Portfolio() {
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                     I'm currently an{" "}
                     <span className="font-semibold text-green-600 dark:text-green-400">
-                      AI Engineer & Software Developer at UI Health
+                      AI Full Stack Engineering Co-Op at Southern Illinois Healthcare
                     </span>{" "}
-                    building healthcare AI search platforms with{" "}
-                    <span className="font-medium">Django, Go, React 19, Azure OpenAI, and Azure AI Search</span>. Previously a{" "}
+                    continuing development of the 1-Search platform with{" "}
+                    <span className="font-medium">Django, Go, React 19, Azure OpenAI, and Azure AI Search</span>, after starting the same platform as a{" "}
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">
+                      Graduate Research Assistant at UI Health
+                    </span>{" "}
+                    (Nov 2025 – Aug 2026). Before that, a{" "}
                     <span className="font-semibold text-blue-600 dark:text-blue-400">
                       Data & AI Engineering Analyst at Accenture
                     </span>{" "}
@@ -378,7 +323,7 @@ export default function Portfolio() {
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                       <span>
-                        VelocityLLM: <strong>67% cost reduction</strong> vs OpenAI API via semantic caching (85% cosine similarity) + complexity-based routing
+                        VelocityLLM: self-hosted Go LLM gateway with a <strong>5-strategy pluggable router</strong>, per-model circuit breakers, and a semantic cache (85% cosine-similarity threshold)
                       </span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -414,21 +359,21 @@ export default function Portfolio() {
                   </div>
 
                   <div className="space-y-8">
-                    {/* UI Health - Graduate Hourly (Current) */}
+                    {/* Southern Illinois Healthcare - AI Full Stack Engineering Co-Op (Current) */}
                     <div className="relative pl-6 border-l-2 border-green-200 dark:border-green-800">
                       <div className="absolute -left-2 top-0 w-4 h-4 bg-green-500 rounded-full animate-pulse"></div>
 
                       <div className="mb-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                           <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            AI Engineer & Software Developer (Graduate Hourly)
+                            AI Full Stack Engineering Co-Op
                           </h4>
                           <span className="text-sm px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full font-medium">
-                            Nov 2025 – Present
+                            Sept 2026 – Present
                           </span>
                         </div>
                         <p className="text-green-600 dark:text-green-400 font-medium mb-3">
-                          UI Health | Chicago, Illinois
+                          Southern Illinois Healthcare
                         </p>
 
                         {/* Key Projects */}
@@ -439,7 +384,65 @@ export default function Portfolio() {
                           </h5>
                           <div className="mb-3 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border border-green-100 dark:border-green-800">
                             <p className="text-sm text-gray-700 dark:text-gray-300">
-                              <strong className="text-green-600 dark:text-green-400">Healthcare Search Platform:</strong> Developed the 1-Search platform aggregating data from 10+ medical sources achieving 1.2s fast-mode latency. Transformed data pipeline from 30-minute polling to event-driven, low-latency architecture.
+                              <strong className="text-green-600 dark:text-green-400">1-Search Platform Migration:</strong> Continuing development of the 1-Search medical search platform following its transition to a new health system. Authored the Azure/vendor access and integration checklist for migrating the platform's search index, storage, and OAuth integrations to the new organization.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Tech Stack */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                            Tech Stack:
+                          </h5>
+                          <div className="flex flex-wrap gap-2">
+                            {[
+                              "Django REST",
+                              "React 19",
+                              "Go (Chi)",
+                              "FastAPI",
+                              "Elasticsearch",
+                              "Azure AI Search",
+                              "Azure OpenAI",
+                              "Redis",
+                            ].map((tech) => (
+                              <span
+                                key={tech}
+                                className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-sm rounded-full border border-green-200 dark:border-green-800"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* UI Health - Graduate Research Assistant (Ended) */}
+                    <div className="relative pl-6 border-l-2 border-blue-200 dark:border-blue-800">
+                      <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
+
+                      <div className="mb-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+                          <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                            AI Engineer & Software Developer (Graduate Research Assistant)
+                          </h4>
+                          <span className="text-sm px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full font-medium">
+                            Nov 2025 – Aug 2026
+                          </span>
+                        </div>
+                        <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
+                          UI Health | Chicago, Illinois
+                        </p>
+
+                        {/* Key Projects */}
+                        <div className="mb-4">
+                          <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center gap-2">
+                            <Zap size={16} className="text-yellow-500" />
+                            Major Projects & Impact:
+                          </h5>
+                          <div className="mb-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
+                            <p className="text-sm text-gray-700 dark:text-gray-300">
+                              <strong className="text-blue-600 dark:text-blue-400">Healthcare Search Platform:</strong> Developed the 1-Search platform aggregating data from 10+ medical sources achieving 1.2s fast-mode latency. Transformed data pipeline from 30-minute polling to event-driven, low-latency architecture.
                             </p>
                           </div>
                         </div>
@@ -464,7 +467,7 @@ export default function Portfolio() {
                             ].map((tech) => (
                               <span
                                 key={tech}
-                                className="px-3 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-sm rounded-full border border-green-200 dark:border-green-800"
+                                className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 text-sm rounded-full border border-blue-200 dark:border-blue-800"
                               >
                                 {tech}
                               </span>
@@ -475,7 +478,7 @@ export default function Portfolio() {
                         {/* Detailed Achievements */}
                         <div className="mb-4">
                           <h5 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 flex items-center gap-2">
-                            <Award size={16} className="text-green-500" />
+                            <Award size={16} className="text-blue-500" />
                             Key Contributions:
                           </h5>
                           <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
@@ -1129,7 +1132,7 @@ export default function Portfolio() {
                 <div className="p-8">
                   {/* Description */}
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
-                    Full-stack automation platform (<strong>66K+ LOC</strong>) with Next.js 15, TypeScript, PostgreSQL/pgvector featuring visual workflow builder, multi-model AI orchestration, RAG system, and OAuth integrations serving <strong>100+ users</strong>. Designed with multi-tenant SaaS, WebSocket collaboration achieving <strong>sub-200ms API latency</strong> and <strong>99.9% uptime</strong>.
+                    Full-stack workflow automation platform (Next.js 15, TypeScript, Supabase/pgvector) with a drag-and-drop visual builder, a BullMQ/Redis job queue for durable async execution, and a multi-provider LLM layer routing across OpenAI, Anthropic, and Gemini with per-model cost accounting.
                   </p>
 
                   {/* Key Features */}
@@ -1141,27 +1144,27 @@ export default function Portfolio() {
                     <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
-                        <span>Graph-based workflow engine</span>
+                        <span>Graph-interpreter workflow engine</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                        <span>Multi-model AI orchestration</span>
+                        <span>Multi-provider LLM cost accounting</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                        <span>RAG with pgvector</span>
+                        <span>BullMQ/Redis durable job queue</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
-                        <span>OAuth 2.0 integrations</span>
+                        <span>3-scheme webhook auth (API key/bearer/HMAC)</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-yellow-500"></div>
-                        <span>Multi-tenant SaaS architecture</span>
+                        <span>Row Level Security multi-tenant schema</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-indigo-500"></div>
-                        <span>99.9% uptime, sub-200ms latency</span>
+                        <span>OAuth token lifecycle management</span>
                       </li>
                     </ul>
                   </div>
@@ -1206,7 +1209,7 @@ export default function Portfolio() {
                       Architecture Highlights
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Built graph-based workflow engine with conditional branching, parallel execution, error recovery achieving 95%+ success rates across 10K+ executions. Integrated multi-provider AI agents with function calling, intelligent routing, and cost tracking reducing operational costs by 40%.
+                      Diagnosed and fixed a production Postgres Row Level Security outage caused by a parameter/column name collision, rebuilding ~25 RLS policies across 12 tables in one migration. Worked around the fact that both Vercel Cron and GitHub Actions floor at 5-minute intervals by driving workflow scheduling off a database-stored next-run timestamp instead.
                     </p>
                   </div>
 
@@ -1411,9 +1414,8 @@ export default function Portfolio() {
                 <div className="p-8">
                   {/* Description */}
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
-                    Go-based distributed inference system achieving{" "}
-                    <strong>67% cost reduction</strong> vs OpenAI API with{" "}
-                    <strong>&lt; 200ms latency</strong>. Features RESTful microservices with PostgreSQL, Redis caching, and clean architecture principles. Scaled for reliability via Kubernetes orchestration, health checks, and observability middleware.
+                    Self-hosted LLM gateway written in Go, routing completions across OpenAI and Anthropic through a{" "}
+                    <strong>5-strategy pluggable router</strong> (cost/latency/quality-aware "smart" mode) with per-model circuit breakers, a two-tier cache, and a Redis-backed distributed rate limiter using a hand-written atomic Lua sliding-window script.
                   </p>
 
                   {/* Key Features */}
@@ -1425,27 +1427,27 @@ export default function Portfolio() {
                     <ul className="grid sm:grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
-                        <span>67% cost reduction vs OpenAI</span>
+                        <span>5-strategy pluggable routing engine</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-red-500"></div>
-                        <span>Sub-200ms latency at scale</span>
+                        <span>Per-model circuit breakers &amp; retry/backoff</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-pink-500"></div>
-                        <span>RESTful microservices architecture</span>
+                        <span>Full OAuth2 (Google/GitHub) with CSRF-protected state</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-purple-500"></div>
-                        <span>Redis caching & PostgreSQL persistence</span>
+                        <span>Two-tier cache: Redis + semantic similarity</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
-                        <span>Kubernetes orchestration</span>
+                        <span>Distributed sliding-window rate limiter (Lua)</span>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
-                        <span>Clean architecture & observability</span>
+                        <span>Standalone Python/vLLM inference worker</span>
                       </li>
                     </ul>
                   </div>
@@ -1482,7 +1484,7 @@ export default function Portfolio() {
                       Architecture Highlights
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Implements clean architecture principles with separation of concerns, dependency injection, and domain-driven design. Features health checks, metrics collection, and distributed tracing for production-grade observability.
+                      Authored production HAProxy and Nginx load-balancing configs with SSE-aware buffering, sticky sessions, and canary-weighted pools, plus Kubernetes manifests with readiness/liveness probes. A correctly-implemented OAuth2 CSRF flow (HttpOnly, SameSite state cookie) protects the auth layer.
                     </p>
                   </div>
 
@@ -1574,6 +1576,14 @@ export default function Portfolio() {
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500"></div>
                         <span>Real-time SSE dashboard (Redis Pub/Sub)</span>
                       </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-teal-500"></div>
+                        <span>149-test suite, 70% CI coverage gate</span>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-orange-500"></div>
+                        <span>Standalone MCP server over the agent's own data</span>
+                      </li>
                     </ul>
                   </div>
 
@@ -1606,7 +1616,7 @@ export default function Portfolio() {
                       Architecture Highlights
                     </h4>
                     <p className="text-sm text-gray-700 dark:text-gray-300">
-                      Two-layer AI quality filter (Planner routes domains + Judge filters noise) before posting to GitHub. Feedback loop stores accepted/false-positive signals per repo/domain and injects as few-shot examples — continuous specialization without retraining.
+                      Two-layer AI quality filter (Planner routes domains + Judge filters noise) before posting to GitHub. Feedback loop stores accepted/false-positive signals per repo/domain and injects as few-shot examples — continuous specialization without retraining. CI runs the full suite against real Postgres+pgvector and Redis containers with strict mypy and ruff. The agent's own review history and knowledge base are also exposed as an MCP server, so it can be queried as a tool by other AI agents.
                     </p>
                   </div>
 
