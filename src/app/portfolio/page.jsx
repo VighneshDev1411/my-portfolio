@@ -583,9 +583,12 @@ export default function Portfolio() {
                           <div className="flex flex-wrap gap-2">
                             {[
                               "Python",
+                              "PyTorch",
                               "FastAPI",
                               "Azure OpenAI",
                               "Elasticsearch",
+                              "Vector Search",
+                              "CrewAI",
                               "Azure Data Factory",
                               "Databricks",
                               "React/Next.js",
@@ -652,6 +655,36 @@ export default function Portfolio() {
                               <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-2 flex-shrink-0"></div>
                               <div>
                                 <strong>Prompt Engineering & Evaluation:</strong> Conducted prompt engineering, evaluation, and iterative fine-tuning of LLM workflows, improving response relevance and reducing hallucination rates across customer-facing GenAI products
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>RAG-Based Semantic Search:</strong> Built RAG-based semantic search systems using PyTorch and vector embeddings, enabling faster and more accurate product/document search for Fortune 500 retail clients including Macy's, Home Depot, Walmart, and Costco — replacing slower, less relevant keyword-based search
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-pink-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Agentic AI Workflows:</strong> Designed and deployed agentic AI workflows using CrewAI, automating multi-step retail data processing tasks and replacing manual workflows with autonomous, self-directed agent pipelines
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-cyan-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Deep Learning for Retail Forecasting:</strong> Developed and fine-tuned deep learning models in PyTorch for retail forecasting and optimization use cases, improving prediction quality and enabling reliable production deployment across Fortune 500 retail client engagements
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-lime-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>Vector Search Infrastructure:</strong> Implemented vector search infrastructure to support large-scale semantic search across retail product catalogs, enabling fast, relevant retrieval even across large, high-volume datasets
+                              </div>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 rounded-full bg-violet-500 mt-2 flex-shrink-0"></div>
+                              <div>
+                                <strong>End-to-End AI Search Delivery:</strong> Delivered end-to-end AI search and retrieval solutions across multiple retail engagements, combining RAG, vector search, and agentic orchestration to solve real business problems around product discovery and workflow automation
                               </div>
                             </li>
                           </ul>
