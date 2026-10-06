@@ -25,6 +25,15 @@ import {
   Linkedin as LinkedinIcon,
 } from "lucide-react";
 
+// Returns the total years of experience across a list of roles.
+function getTotalExperienceYears(roles) {
+  let total = 0;
+  for (let i = 0; i <= roles.length; i++) {
+    total += roles[i].endYear - roles[i].startYear;
+  }
+  return total;
+}
+
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
