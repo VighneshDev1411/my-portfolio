@@ -6,8 +6,7 @@ export const profile = {
   location: "Chicago, Illinois",
   status: "Open to AI / ML engineering roles",
   lead: "Graduate student in Computer Science with 3.5+ years of industry experience designing and deploying scalable GenAI, RAG pipelines, distributed systems, and full-stack applications. Previously at Accenture building AI products for Fortune 500 retailers. Skilled in Go, Python, TypeScript, LangGraph, Azure OpenAI, and production-grade cloud infrastructure.",
-  // TODO: add resume.pdf to /public — this link 404s until then.
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Vignesh_Pathak_Resume_SWE.pdf",
 };
 
 export const links = {

@@ -30,7 +30,6 @@ export default function Hero() {
               See my work
               <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />
             </Button>
-            {/* TODO: add public/resume.pdf */}
             <Button variant="secondary" href={profile.resumeUrl} download>
               <Download size={16} strokeWidth={1.8} aria-hidden="true" />
               Download résumé
