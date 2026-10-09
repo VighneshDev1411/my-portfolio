@@ -4,7 +4,7 @@ export const profile = {
   name: "Vignesh Pathak",
   initials: "VP",
   location: "Chicago, Illinois",
-  status: "Open to AI / ML engineering roles",
+  status: "Open to SWE, AI SWE & AI / ML roles",
   lead: "Graduate student in Computer Science with 3.5+ years of industry experience designing and deploying scalable GenAI, RAG pipelines, distributed systems, and full-stack applications. Previously at Accenture building AI products for Fortune 500 retailers. Skilled in Go, Python, TypeScript, LangGraph, Azure OpenAI, and production-grade cloud infrastructure.",
   resumeUrl: "/Vignesh_Pathak_Resume_SWE.pdf",
 };
