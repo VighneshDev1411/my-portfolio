@@ -78,7 +78,7 @@ export function Card({ as: Tag = "div", className, children }) {
 
 export function Pill({ children }) {
   return (
-    <span className="rounded-full border border-border bg-surface px-3.5 py-2 text-sm text-ink-2">
+    <span className="inline-flex items-center rounded-full border border-border bg-surface px-3.5 py-2 text-sm leading-tight text-ink-2">
       {children}
     </span>
   );
@@ -86,7 +86,7 @@ export function Pill({ children }) {
 
 export function Tag({ children }) {
   return (
-    <span className="rounded-sm bg-chip px-3 py-1.5 font-mono text-xs text-ink-2">
+    <span className="inline-flex items-center rounded-sm bg-chip px-3 py-1.5 font-mono text-xs leading-tight text-ink-2">
       {children}
     </span>
   );
