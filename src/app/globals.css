@@ -68,54 +68,56 @@
 /* ---------------------------------------------------------------------------
    Base styles
 --------------------------------------------------------------------------- */
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+@layer base {
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
 
-a:hover {
-  color: var(--accent-hover);
-}
+  a:hover {
+    color: var(--accent-hover);
+  }
 
-section[id] {
-  scroll-margin-top: 80px; /* clears the sticky nav */
-}
+  section[id] {
+    scroll-margin-top: 80px; /* clears the sticky nav */
+  }
 
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
 
-/* Serif italic accent words (hero H1 and contact H2 only) */
-.accent-word {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  color: var(--accent);
-}
+  /* Serif italic accent words (hero H1 and contact H2 only) */
+  .accent-word {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
 
-/* Native <details> disclosure used for "More" sections */
-details > summary {
-  list-style: none;
-  cursor: pointer;
-}
+  /* Native <details> disclosure used for "More" sections */
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
 
-details > summary::-webkit-details-marker {
-  display: none;
-}
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
 
-details[open] > summary .disclosure-icon {
-  transform: rotate(180deg);
+  details[open] > summary .disclosure-icon {
+    transform: rotate(180deg);
+  }
 }
 
 /* ---------------------------------------------------------------------------
