@@ -18,7 +18,7 @@
   --text: #1f2a37;
   --text-2: #4a5868;
   --text-3: #5b6878;
-  --text-muted: #6b7889;
+  --text-muted: #5e6b7c; /* spec #6B7889 darkened: was 3.85–4.49:1, now ≥4.65:1 on all surfaces */
   --accent: #3e5f86;
   --accent-hover: #253e5c;
   --accent-soft: #e4ecf5;
@@ -89,7 +89,7 @@
   }
 
   section[id] {
-    scroll-margin-top: 80px; /* clears the sticky nav */
+    scroll-margin-top: 96px; /* clears the ~81px sticky nav with breathing room */
   }
 
   :focus-visible {
