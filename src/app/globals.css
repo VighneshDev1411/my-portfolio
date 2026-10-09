@@ -1,68 +1,145 @@
 @import "tailwindcss";
 
-@variant dark (.dark &);
-
-/* Custom CSS for animations */
-@keyframes fade-in {
-  from { 
-    opacity: 0; 
-  }
-  to { 
-    opacity: 1; 
-  }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 1s ease-out;
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out;
-}
-
-.delay-200 {
-  animation-delay: 0.2s;
-  animation-fill-mode: both;
-}
-
-.delay-300 {
-  animation-delay: 0.3s;
-  animation-fill-mode: both;
-}
-
-.delay-400 {
-  animation-delay: 0.4s;
-  animation-fill-mode: both;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Ensure proper theming */
-.dark {
-  color-scheme: dark;
-}
-
-/* Light mode overrides if needed */
+/* ---------------------------------------------------------------------------
+   Design tokens — "Cool Light" theme (see portfolio-redesign-spec.md §2, §8).
+   Components reference these through the Tailwind theme below; never hard-code
+   hex values outside this file. To change the accent, swap --accent and
+   --accent-soft only.
+--------------------------------------------------------------------------- */
 :root {
-  --color-background: #ffffff;
-  --color-foreground: #000000;
+  --bg: #f3f6f9;
+  --surface: #ffffff;
+  --surface-muted: #eef2f7;
+  --surface-tint: #e8eef5;
+  --chip: #f3f6f9;
+  --border: #e2e8ef;
+  --border-strong: #dce3eb;
+  --divider: #eef2f6;
+  --text: #1f2a37;
+  --text-2: #4a5868;
+  --text-3: #5b6878;
+  --text-muted: #5e6b7c; /* spec #6B7889 darkened: was 3.85–4.49:1, now ≥4.65:1 on all surfaces */
+  --accent: #3e5f86;
+  --accent-hover: #253e5c;
+  --accent-soft: #e4ecf5;
+  --success: #5fa58a;
+  --nav-bg: rgba(243, 246, 249, 0.86);
+
+  color-scheme: light;
 }
 
-.dark {
-  --color-background: #0f172a;
-  --color-foreground: #ffffff;
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-tint: var(--surface-tint);
+  --color-chip: var(--chip);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-divider: var(--divider);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-ink-3: var(--text-3);
+  --color-ink-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-nav: var(--nav-bg);
+
+  /* next/font variables are set on <html> in layout.jsx */
+  --font-sans: var(--font-geist), system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@theme {
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 28px;
+  --radius-3xl: 32px;
+
+  --container-page: 1120px;
+  --breakpoint-xs: 481px;
+}
+
+/* ---------------------------------------------------------------------------
+   Base styles
+--------------------------------------------------------------------------- */
+@layer base {
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent-hover);
+  }
+
+  section[id] {
+    scroll-margin-top: 96px; /* clears the ~81px sticky nav with breathing room */
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* Serif italic accent words (hero H1 and contact H2 only) */
+  .accent-word {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  /* Native <details> disclosure used for "More" sections */
+  details > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details[open] > summary .disclosure-icon {
+    transform: rotate(180deg);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Motion — subtle and opt-in only
+--------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  [data-reveal] {
+    transition:
+      opacity 500ms ease-out,
+      transform 500ms ease-out;
+  }
+
+  [data-reveal="pending"] {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  .disclosure-icon {
+    transition: transform 0.2s ease;
+  }
 }
